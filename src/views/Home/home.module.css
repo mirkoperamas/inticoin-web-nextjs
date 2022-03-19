@@ -1,0 +1,29 @@
+.containerInicio{
+    /* background-image: url(/img/home/sky-background.png); */
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.homeContainer {
+    transition: 3s opacity;
+    opacity: 0 ;
+
+}
+
+.containerInicio .worldHomeContainer {
+    background-color: #000;
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    opacity: 1;
+    width: 100%;
+    z-index: 1000;
+}
+
+

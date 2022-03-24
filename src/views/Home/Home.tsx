@@ -5,7 +5,7 @@ import classes from "./home.module.css";
 export const HomeView = () => {
 
 	return (
-		<div className={classes.containerInicio}>
+		<div className={classes.containerInicio} style={{overflow: 'hidden'}}>
 			{/* <div>
                 Hello world
             </div> */}

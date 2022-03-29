@@ -1,0 +1,49 @@
+.contain{
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    position: absolute;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+}
+.text{
+    position: relative;
+    flex-direction: column;
+    top: 30%;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    max-width: 40rem;
+    padding: 0 1rem;
+}
+
+.text h1{
+    font-size: 45px;
+}
+
+.text strong{
+    color: darkgoldenrod;
+}
+
+.text h3{
+    font-size: 30px;
+}
+
+.image{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    max-width: 20rem;
+    max-height: 20rem;
+    top: 35%;
+    right: 20%;
+}
+
+#image{
+    width: 90%;
+}

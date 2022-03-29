@@ -1,30 +1,113 @@
-import React, { useEffect } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
+import React, { useEffect, useRef } from "react";
 import classes from "./carousel.module.css";
-import Autoplay from 'embla-carousel-autoplay';
 import Image from "next/image";
+import { Controls } from "./components/Controls/Controls";
+import { FirstSlide } from "./components/slides/FirstSlide/FirstSlide";
+import { SecondSlide } from "./components/slides/SecondSlide/SecondSlide";
+import { ThirdSlide } from "./components/slides/ThirdSlide/ThirdSlide";
+import { FourthSlide } from "./components/slides/FourthSlide/FourthSlide";
 
-export const EmblaCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+export const Carousel = () => {
+  const slideshow = useRef(null);
 
-    useEffect(() => {
-        if (emblaApi) {
-          // Embla API is ready
-        }
-      }, [emblaApi])
+  const before = () => {
+    if (
+      slideshow.current !== null &&
+      slideshow.current !== "" &&
+      slideshow.current !== undefined
+    ) {
+      // @ts-ignore: Object is possibly 'null'.
+      if (slideshow.current.children.length > 0) {
+        // @ts-ignore: Object is possibly 'null'.
+        const index = slideshow.current.children.length - 1;
+        // @ts-ignore: Object is possibly 'null'.
+        const lastElement = slideshow.current.children[index];
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.insertBefore(
+          lastElement,
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.firstChild
+        );
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.style.transition = "none";
+        // @ts-ignore: Object is possibly 'null'.
+        const size = slideshow.current.children[0].offsetWidth;
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.style.transform = `translateX(-${size}px)`;
+        setTimeout(() => {
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.style.transition = `1000ms ease-out all`;
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.style.transform = `translateX(0)`;
+        }, 30);
+      }
+    }
+  };
+
+  const after = () => {
+    if (
+      slideshow.current !== null &&
+      slideshow.current !== "" &&
+      slideshow.current !== undefined
+    ) {
+      // @ts-ignore: Object is possibly 'null'.
+      if (slideshow.current.children.length > 0) {
+        // @ts-ignore: Object is possibly 'null'.
+        const firstElement = slideshow.current.children[0];
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.style.transition = `1000ms ease-out all`;
+        // @ts-ignore: Object is possibly 'null'.
+        const size = slideshow.current.children[0].offsetWidth;
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.style.transform = `translateX(-${size}px)`;
+
+        const isTransition = () => {
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.style.transition = "none";
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.style.transform = `translateX(0)`;
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.appendChild(firstElement);
+          // @ts-ignore: Object is possibly 'null'.
+          slideshow.current.removeEventListener("transitionend", isTransition);
+        };
+        // @ts-ignore: Object is possibly 'null'.
+        slideshow.current.addEventListener("transitionend", isTransition);
+      }
+    }
+  };
+
+  // useEffect(() => {
+  //   if (
+  //     slideshow.current !== null &&
+  //     slideshow.current !== "" &&
+  //     slideshow.current !== undefined
+  //   ) {
+  //     setInterval(() => {
+  //       after();
+  //     }, 10000);
+  //   }
+  // }, []);
 
   return (
     <>
-    <div style={{width: '100%', height:'100vh', backgroundColor: 'black', position: 'absolute', zIndex: '9', opacity: '.6'}}></div>
-      <div className={classes.embla} ref={emblaRef}>
-        {/* <div className={classes.embla__container} style={{height: 'calc(100vh - 10rem)'}}> */}
-        <div className={classes.embla__container} style={{height: 'calc(100vh)'}}>
-          <div className={classes.embla__slide}><Image src={"/img/home/carousel/image1.png"} layout="fill" objectFit="cover" /></div>
-          <div className={classes.embla__slide}><Image src={"/img/home/carousel/image2.png"} layout="fill" objectFit="cover" /></div>
-          <div className={classes.embla__slide}><Image src={"/img/home/carousel/image3.png"} layout="fill" objectFit="cover" /></div>
-          <div className={classes.embla__slide}><Image src={"/img/home/carousel/image4.png"} layout="fill" objectFit="cover" /></div>
+      <div className={classes.container}>
+        <div className={classes.slideshow} ref={slideshow}>
+          <div className={classes.slide}>
+            <FirstSlide />
+          </div>
+          <div className={classes.slide}>
+            <SecondSlide />
+          </div>
+          <div className={classes.slide}>
+            <ThirdSlide />
+          </div>
+          <div className={classes.slide}>
+            <FourthSlide />
+          </div>
         </div>
       </div>
+      <Controls before={before} after={after} />
     </>
- )
-}
+  );
+};

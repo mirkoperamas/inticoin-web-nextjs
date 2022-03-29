@@ -1,0 +1,47 @@
+.contain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.column{
+    display: flex;
+    justify-content: center;
+}
+.text{
+    position: relative;
+    flex-direction: column;
+    top: 30%;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    max-width: 40rem;
+    padding: 0 1rem;
+}
+
+.text h1{
+    font-size: 45px;
+}
+
+.text strong{
+    color: darkgoldenrod;
+}
+
+.text h3{
+    font-size: 30px;
+}
+
+.image{
+    position: relative;
+    width: 75%;
+    height: 90%;
+    bottom: -11%;
+    min-width: 30rem;
+}
+
+#image{
+    width: 90%;
+}

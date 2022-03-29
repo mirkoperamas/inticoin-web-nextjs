@@ -1,12 +1,25 @@
-.embla {
-    overflow: hidden;
-    background-color: black;
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    position: relative;
-    flex: 0 0 100%;
-  }
+.slideshow{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slide{
+  min-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: .3s ease all;
+  z-index: 10;
+  position: relative;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}

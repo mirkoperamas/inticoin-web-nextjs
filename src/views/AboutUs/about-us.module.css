@@ -1,0 +1,33 @@
+.containerAbout{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(/img/about-us/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerAbout h1{
+    position: absolute;
+    top: 21.5%;
+    left: 17%;
+    color: #fff;
+    font-size: 60px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.description{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    background: #5f3f04a6;
+    padding: 1rem 5rem;
+}
+.description p{
+    color: #f0cb90;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 27px;
+}

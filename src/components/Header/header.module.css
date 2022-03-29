@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 7rem;
+    height: 9rem;
     justify-content: center;
     top: 2%;
     left: 0;
@@ -18,7 +18,7 @@
     width: 15rem;
     height: 3rem; 
     margin: 0 auto; 
-    top: -15%;
+    top: -10%;
 }
 .logo div{
     position: relative;

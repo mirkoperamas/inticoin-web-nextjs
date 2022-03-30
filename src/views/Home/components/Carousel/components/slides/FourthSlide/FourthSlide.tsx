@@ -13,7 +13,7 @@ export const FourthSlide = () => {
                 </div>
                 <div className={classes.column}>
                     <div className={classes.image}>
-                        <Image src="/img/home/carousel/slides-images/character-1.png" layout="fill" />
+                        <Image src="/img/home/carousel/slides-images/laptop.png" layout="fill" priority />
                     </div>
                 </div>
             </main>

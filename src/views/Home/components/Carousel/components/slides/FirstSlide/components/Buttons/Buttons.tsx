@@ -13,7 +13,7 @@ export const Buttons = () => {
 
   return (
     <>
-      <button className={classes.button} onClick={() => setContract(true)}>
+      <button className={classes.button} onClick={() => setPaper(true)}>
         Copiar Contrato
       </button>
       <button className={classes.button} onClick={() => setPaper(true)}>Inti Papper</button>

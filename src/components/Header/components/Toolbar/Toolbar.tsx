@@ -23,14 +23,14 @@ export const Toolbar = () => {
                     <Link href='/'>
                         <a>
                             <li>
-                                <p>Text</p>
+                                <p>Crowdsale</p>
                             </li>
                         </a>
                     </Link>
                     <Link href='/'>
                         <a>
                             <li>
-                                <p>Text</p>
+                                <p>Convocatoria</p>
                             </li>
                         </a>
                     </Link>

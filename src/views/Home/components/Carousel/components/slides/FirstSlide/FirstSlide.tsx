@@ -5,7 +5,11 @@ import classes from "./first-slide.module.css";
 export const FirstSlide = () => {
     return(
         <>
-            <Image src="/img/home/carousel/banner-1.jpg" layout="fill" priority />
+        <div className={classes.background}>
+            <div>
+                <Image src="/img/home/carousel/banner-1.jpg" layout="fill" objectFit="cover" priority />
+            </div>
+        </div>
             <main className={classes.contain}>
                 <div className={classes.column}>
                     <div className={classes.text}>

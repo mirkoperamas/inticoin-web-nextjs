@@ -5,7 +5,11 @@ import Link from "next/link";
 export const ThirdSlide = () => {
   return (
     <>
-      <Image src="/img/home/carousel/banner-3.jpg" layout="fill" />
+      <div className={classes.background}>
+        <div>
+          <Image src="/img/home/carousel/banner-3.jpg" layout="fill" objectFit="cover" />
+        </div>
+      </div>
       <main className={classes.contain}>
         <div className={classes.column}>
           <div className={classes.text}>

@@ -6,8 +6,14 @@ export const ThirdSlide = () => {
   return (
     <>
       <div className={classes.background}>
-        <div>
-          <Image src="/img/home/carousel/banner-3.jpg" layout="fill" objectFit="cover" />
+        <div className={classes.backgroundImage}>
+          <div>
+            <Image
+              src="/img/home/carousel/banner-3.jpg"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
       </div>
       <main className={classes.contain}>
@@ -35,7 +41,8 @@ export const ThirdSlide = () => {
           <div className={classes.image}>
             <Image
               src="/img/home/carousel/slides-images/coin.png"
-              layout="fill" priority
+              layout="fill"
+              priority
             />
           </div>
         </div>

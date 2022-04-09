@@ -77,17 +77,17 @@ export const Carousel = () => {
     }
   };
 
-  useEffect(() => {
-    if (
-      slideshow.current !== null &&
-      slideshow.current !== "" &&
-      slideshow.current !== undefined
-    ) {
-      setInterval(() => {
-        after();
-      }, 10000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     slideshow.current !== null &&
+  //     slideshow.current !== "" &&
+  //     slideshow.current !== undefined
+  //   ) {
+  //     setInterval(() => {
+  //       after();
+  //     }, 10000);
+  //   }
+  // }, []);
 
   return (
     <>

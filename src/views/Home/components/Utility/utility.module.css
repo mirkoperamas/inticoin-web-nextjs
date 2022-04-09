@@ -1,0 +1,112 @@
+.content {
+  background: #fff;
+  box-shadow: 0 4px 24px #00000014;
+  padding: 10% 4%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+}
+
+.text {
+  padding: 0 12%;
+}
+
+.text h2 {
+  text-transform: uppercase;
+  color: #a8830a;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 35px;
+}
+
+.text p {
+  color: rgb(0, 0, 0);
+  /* font-weight: bold; */
+  font-size: 20px;
+  line-height: 30px;
+  text-align: start;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  row-gap: 10%;
+}
+
+.card {
+  border-radius: 20px;
+  background: #ffffff;
+  /* box-shadow: inset 20px 20px 60px #d9d9d9, inset -20px -20px 60px #ffffff; */
+  box-shadow: -2px -2px 5px #00000014;
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.card p {
+  font-size: 13px;
+  padding: 4%;
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.card:hover {
+  border-radius: 21px;
+  background: #ffffff;
+  /* box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
+  box-shadow: 5px 5px 15px #00000014;
+  transform: scale(1.1);
+}
+
+.cardImage {
+  /* border: 1px solid red; */
+  height: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 4%;
+}
+
+#wallet {
+  background-image: url("/img/home/utility/wallet-icon.png");
+  transition: 0.5s;
+}
+#sum {
+  background-image: url("/img/home/utility/sum-icon.png");
+  transition: 0.5s;
+}
+#check {
+  background-image: url("/img/home/utility/check-icon.png");
+  transition: 0.5s;
+}
+#security {
+  background-image: url("/img/home/utility/security-icon.png");
+  transition: 0.5s;
+}
+#document {
+  background-image: url("/img/home/utility/document-icon.png");
+  transition: 0.5s;
+}
+#sun {
+  background-image: url("/img/home/utility/sun-icon.png");
+  transition: 0.5s;
+}
+
+.card:hover #wallet {
+  background-image: url("/img/home/utility/wallet-icon2.png");
+}
+.card:hover #sum {
+  background-image: url("/img/home/utility/sum-icon2.png");
+}
+.card:hover #check {
+  background-image: url("/img/home/utility/check-icon2.png");
+}
+.card:hover #security {
+  background-image: url("/img/home/utility/security-icon2.png");
+}
+.card:hover #document {
+  background-image: url("/img/home/utility/document-icon2.png");
+}
+.card:hover #sun {
+  background-image: url("/img/home/utility/sun-icon2.png");
+}

@@ -1,0 +1,20 @@
+.container {
+  background: #f9f9f9;
+  padding: 8% 1.5%;
+}
+
+.text {
+  width: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text h2 {
+  color: #a8830a;
+  font-size: 30px;
+}
+
+.text p {
+  color: rgb(48, 48, 48);
+  font-size: 20px;
+}

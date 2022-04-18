@@ -15,7 +15,11 @@ export const Header = () => {
             <Link href="/">
               <a>
                 <div>
-                  <Image src="/img/home/inticoin-icon.png" layout="fill" />
+                  <Image
+                    src="/img/home/inticoin-icon.png"
+                    layout="fill"
+                    alt="inticoin icon"
+                  />
                 </div>
               </a>
             </Link>

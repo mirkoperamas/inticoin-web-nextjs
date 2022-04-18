@@ -14,6 +14,7 @@ export const Description = () => {
                   width={380}
                   height={400}
                   layout="responsive"
+                  alt="coin"
                 />
               </div>
               <div className={classes.image} id={classes.image2}>
@@ -22,6 +23,7 @@ export const Description = () => {
                   width={380}
                   height={400}
                   layout="responsive"
+                  alt="coin"
                 />
               </div>
             </div>

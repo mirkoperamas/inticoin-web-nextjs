@@ -13,6 +13,7 @@ export const FirstSlide = () => {
               layout="fill"
               objectFit="cover"
               priority
+              alt="background banner 1"
             />
           </div>
         </div>
@@ -36,6 +37,7 @@ export const FirstSlide = () => {
               src="/img/home/carousel/slides-images/character-1.png"
               layout="fill"
               priority
+              alt="character 1"
             />
           </div>
         </div>

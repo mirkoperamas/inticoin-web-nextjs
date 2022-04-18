@@ -11,6 +11,7 @@ export const Roadmap = () => {
               src="/img/call/roadmap.png"
               layout="fill"
               objectFit="cover"
+              alt="roadmap"
             />
           </div>
         </div>

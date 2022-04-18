@@ -1,25 +1,25 @@
+.controls {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  pointer-events: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1%;
+}
 
-.controls{
-    position: absolute;
-    top: 50%;
-    z-index: 100;
-    pointer-events: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .controls button{
-    pointer-events: all;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    transition: .5s;
-  }
+.controls button {
+  pointer-events: all;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
 
-  .beforeButton{
-    position: relative;
-    transform: rotate(180deg);
-  }
+.beforeButton {
+  position: relative;
+  transform: rotate(180deg);
+}

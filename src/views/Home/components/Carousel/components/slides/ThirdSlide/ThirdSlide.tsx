@@ -12,6 +12,7 @@ export const ThirdSlide = () => {
               src="/img/home/carousel/banner-3.jpg"
               layout="fill"
               objectFit="cover"
+              alt="background banner 3"
             />
           </div>
         </div>
@@ -26,12 +27,17 @@ export const ThirdSlide = () => {
             </h1>
             <h3>Parachain de:</h3>
             <div style={{ marginTop: "-2rem" }}>
-              <a href="https://polkadot.network/" target="blank">
+              <a
+                href="https://polkadot.network/"
+                target="blank"
+                rel="noreferrer"
+              >
                 <Image
                   src="/img/home/carousel/slides-images/polkadot.png"
                   width={340}
                   height={150}
                   priority
+                  alt="polkadot icon"
                 />
               </a>
             </div>
@@ -43,6 +49,7 @@ export const ThirdSlide = () => {
               src="/img/home/carousel/slides-images/coin.png"
               layout="fill"
               priority
+              alt="coin"
             />
           </div>
         </div>

@@ -10,6 +10,7 @@ export const AboutUs = () => {
             src="/img/about-us/background.png"
             layout="fill"
             objectFit="cover"
+            alt="about us background"
           />
         </div>
       </div>

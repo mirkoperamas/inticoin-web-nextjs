@@ -11,6 +11,7 @@ export const FourthSlide = () => {
               src="/img/home/carousel/banner-4.jpg"
               layout="fill"
               objectFit="cover"
+              alt="background banner 4"
             />
           </div>
         </div>
@@ -32,6 +33,7 @@ export const FourthSlide = () => {
               src="/img/home/carousel/slides-images/laptop.png"
               layout="fill"
               priority
+              alt="laptop"
             />
           </div>
         </div>

@@ -13,6 +13,7 @@ export const Description = () => {
               width={9}
               height={10}
               layout="responsive"
+              alt="character"
             />
           </div>
         </div>
@@ -25,6 +26,7 @@ export const Description = () => {
                 <a
                   href="https://es.beincrypto.com/qolkrex-foundation-cancela-proceso-crowdsale-proyecto-inticoin/?utm_source=telegram&utm_medium=social"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   aquí.
                 </a>

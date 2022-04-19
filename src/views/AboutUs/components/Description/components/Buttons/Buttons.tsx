@@ -1,6 +1,6 @@
+import React, { useState } from "react";
+import { Informative } from "../../../../../../components/modals/Informative/Informative";
 import classes from "./buttons.module.css";
-import { useState } from "react";
-import { Informative } from "../../../../../../../../../components/modals/Informative/Informative";
 
 export const Buttons = () => {
   const [contract, setContract] = useState(false);
@@ -16,7 +16,9 @@ export const Buttons = () => {
       <button className={classes.button} onClick={() => setPaper(true)}>
         Copiar Contrato
       </button>
-      <button className={classes.button} onClick={() => setPaper(true)}>Inti Papper</button>
+      <button className={classes.button} onClick={() => setPaper(true)}>
+        Inti Papper
+      </button>
 
       {contract && (
         <Informative handleClose={() => setContract(false)}>
@@ -38,9 +40,9 @@ export const Buttons = () => {
 
       {paper && (
         <Informative handleClose={() => setPaper(false)}>
-            <span>
-                <h2>Proximamente...</h2>
-            </span>
+          <span>
+            <h2>Proximamente...</h2>
+          </span>
         </Informative>
       )}
     </>

@@ -12,6 +12,13 @@
 .toolbar a {
   text-decoration: none;
   width: 100%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-image: linear-gradient(to left, #f0cb90 0%, #cda434 100%) 1;
+  transform: skewX(-20deg);
+  padding: 0.2rem 0;
+  transition: 0.5s;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .toolbar ul {
@@ -24,16 +31,11 @@
   gap: 3%;
 }
 
-.toolbar li {
-  border: 3px solid transparent;
-  border-image: linear-gradient(to left, #f0cb90 0%, #cda434 100%) 1;
-  transform: skewX(-20deg);
-  padding: 0.2rem 0;
-  transition: 0.5s;
-  text-shadow: 1px 1px 1px #000;
+.toolbar a:hover {
+  background: #cda43469;
 }
 
-.toolbar li:hover {
+.active {
   background: #cda43469;
 }
 

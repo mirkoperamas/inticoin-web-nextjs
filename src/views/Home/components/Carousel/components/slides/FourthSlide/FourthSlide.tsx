@@ -1,5 +1,7 @@
 import Image from "next/image";
 import classes from "./fourth-slide.module.css";
+import mainClasses from "../../../carousel.module.css";
+import { UtilityUse } from "../components/UtilityUse/UtilityUse";
 
 export const FourthSlide = () => {
   return (
@@ -16,26 +18,33 @@ export const FourthSlide = () => {
           </div>
         </div>
       </div>
-      <main className={classes.contain}>
-        <div className={classes.column}>
-          <div className={classes.text}>
-            <h1>
-              <strong>
-                Inticoin utilizara UTXO seguridad mientras habilita multiples
-                maquinas virtuales incluidas EVM y ARM VM
-              </strong>
-            </h1>
+      <main className={mainClasses.ajust}>
+        <div className={classes.content}>
+          <div className={classes.column}>
+            <div className={classes.text}>
+              <h1>
+                <strong>
+                  Inticoin utilizara UTXO seguridad mientras habilita multiples
+                  maquinas virtuales incluidas EVM y ARM VM
+                </strong>
+              </h1>
+            </div>
+          </div>
+          <div className={classes.column}>
+            <div className={classes.image}>
+              <Image
+                src="/img/home/carousel/slides-images/laptop.png"
+                layout="responsive"
+                width={20}
+                height={25}
+                priority
+                alt="laptop"
+              />
+            </div>
           </div>
         </div>
-        <div className={classes.column}>
-          <div className={classes.image}>
-            <Image
-              src="/img/home/carousel/slides-images/laptop.png"
-              layout="fill"
-              priority
-              alt="laptop"
-            />
-          </div>
+        <div className={mainClasses.ajust__utility}>
+          <UtilityUse />
         </div>
       </main>
     </>

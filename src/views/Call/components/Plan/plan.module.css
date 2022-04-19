@@ -1,20 +1,70 @@
-.container {
-  background: #f9f9f9;
-  padding: 8% 1.5%;
-}
-
-.text {
+.ajust {
+  position: absolute;
+  top: 0;
   width: 100%;
-  width: 80%;
-  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
-.text h2 {
-  color: #a8830a;
-  font-size: 30px;
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.backgroundImage div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  z-index: 10000;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  top: 0;
+  padding-top: 15%;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+}
+.text {
+  position: relative;
+  flex-direction: column;
+  /* top: 30%; */
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  max-width: 40rem;
+  padding: 0 1rem;
+}
+
+.text h1 {
+  font-size: 50px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .text p {
-  color: rgb(48, 48, 48);
   font-size: 20px;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  bottom: 8%;
 }

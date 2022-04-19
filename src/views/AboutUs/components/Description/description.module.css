@@ -1,0 +1,49 @@
+.aboutUs__description {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  padding-top: 7.9%;
+  background: rgba(255, 255, 0, 0.121);
+}
+
+.aboutUs__descriptionImage {
+  width: 100%;
+}
+
+.aboutUs__descriptionImage__content {
+  position: relative;
+  width: 100%;
+  max-width: 45rem;
+}
+
+.aboutUs__descriptionText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.aboutUs__descriptionText h1 {
+  font-size: 35px;
+}
+
+.aboutUs__descriptionText__content {
+  width: 100%;
+  border-top-left-radius: 5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(136, 84, 62, 0.6) 0%,
+    rgba(60, 11, 0, 0.4) 94%
+  );
+  padding: 1.5rem 2.5rem;
+  opacity: 0.8;
+}
+
+.aboutUs__descriptionText__buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4% 0;
+}

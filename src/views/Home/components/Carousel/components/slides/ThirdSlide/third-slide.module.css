@@ -18,13 +18,12 @@
   height: 100%;
 }
 
-.contain {
+.content {
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
-  position: absolute;
+  grid-template-columns: repeat(2, 1fr);
   z-index: 10000;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 70vh;
   justify-content: space-between;
   top: 0;
 }
@@ -61,10 +60,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  width: 20rem;
-  height: 20rem;
-  top: 35%;
-  right: 20%;
+  max-width: 24rem;
+  max-height: 24rem;
+  top: 30%;
 }
 
 #image {

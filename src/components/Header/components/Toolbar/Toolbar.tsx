@@ -1,34 +1,47 @@
+import React, { useState } from "react";
 import classes from "./toolbar.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Informative } from "../../../modals/Informative/Informative";
 
 export const Toolbar = () => {
+  const router = useRouter();
+  const [paper, setPaper] = useState(false);
+
   return (
     <>
       <div className={classes.toolbar}>
         <ul>
           <Link href="/">
-            <a>
+            <a className={router.pathname == "/" ? classes.active : ""}>
               <li>
                 <p>Inicio</p>
               </li>
             </a>
           </Link>
-          <Link href="/crowdsale">
-            <a>
+          {/* <Link href="/crowdsale">
+            <a
+              className={router.pathname == "/crowdsale" ? classes.active : ""}
+            >
               <li>
                 <p>Crowdsale</p>
               </li>
             </a>
-          </Link>
+          </Link> */}
+          <a onClick={() => setPaper(true)}>
+            <li>
+              <p>Venta NFT</p>
+            </li>
+          </a>
           <Link href="/call">
-            <a>
+            <a className={router.pathname == "/call" ? classes.active : ""}>
               <li>
                 <p>Convocatoria</p>
               </li>
             </a>
           </Link>
           <Link href="/about-us">
-            <a>
+            <a className={router.pathname == "/about-us" ? classes.active : ""}>
               <li>
                 <p>Acerca de</p>
               </li>
@@ -43,6 +56,14 @@ export const Toolbar = () => {
           </Link> */}
         </ul>
       </div>
+
+      {paper && (
+        <Informative handleClose={() => setPaper(false)}>
+          <span>
+            <h2>Proximamente...</h2>
+          </span>
+        </Informative>
+      )}
     </>
   );
 };

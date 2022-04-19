@@ -1,5 +1,7 @@
 import Image from "next/image";
 import classes from "./second-slide.module.css";
+import mainClasses from "../../../carousel.module.css";
+import { UtilityUse } from "../components/UtilityUse/UtilityUse";
 
 export const SecondSlide = () => {
   return (
@@ -16,22 +18,28 @@ export const SecondSlide = () => {
           </div>
         </div>
       </div>
-      <main className={classes.contain}>
-        <div className={classes.column}>
-          <div className={classes.text}>
-            <h3>Estas en el mejor momento para que puedas comprar tus</h3>
-            <h1>Inticoin's</h1>
+
+      <main className={mainClasses.ajust}>
+        <div className={classes.content}>
+          <div className={classes.column}>
+            <div className={classes.text}>
+              <h3>
+                Establecemos un entorno empresarial distribuido de confianza con
+                informacion transparente, colaboracion eficiente
+              </h3>
+              <div className={classes.textIcon}>
+                <Image
+                  src="/img/home/carousel/slides-images/intichain-icon.png"
+                  layout="responsive"
+                  width={20}
+                  height={3}
+                />
+              </div>
+            </div>
           </div>
         </div>
-        <div className={classes.column}>
-          <div className={classes.image}>
-            <Image
-              src="/img/home/carousel/slides-images/character-2.png"
-              layout="fill"
-              priority
-              alt="character 2"
-            />
-          </div>
+        <div className={mainClasses.ajust__utility}>
+          <UtilityUse />
         </div>
       </main>
     </>

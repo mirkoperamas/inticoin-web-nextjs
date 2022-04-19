@@ -8,11 +8,11 @@ import { Tokenomics } from "./components/Tokenomics/Tokenomics";
 export const Call = () => {
   return (
     <div style={{ overflow: "hidden" }}>
-      <Title />
+      {/* <Title /> */}
       <Plan />
-      <Tokenomics />
+      {/* <Tokenomics /> */}
       <Roadmap />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

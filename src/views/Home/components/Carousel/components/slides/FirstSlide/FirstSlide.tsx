@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { Buttons } from "./components/Buttons/Buttons";
+import { UtilityUse } from "../components/UtilityUse/UtilityUse";
+import { InstallButton } from "./components/InstallButton/InstallButton";
 import classes from "./first-slide.module.css";
+import mainClasses from "../../../carousel.module.css";
 
 export const FirstSlide = () => {
   return (
@@ -18,28 +20,34 @@ export const FirstSlide = () => {
           </div>
         </div>
       </div>
-      <main className={classes.contain}>
-        <div className={classes.column}>
-          <div className={classes.text}>
-            <h1>Instala tu billetera y recibe Inticoin's</h1>
-            <h3>Participa desde ahora con nuestro desarrollo.</h3>
-            <div className={classes.buttonBox}>
-              <h4>Instala tu billetara virtual...</h4>
+
+      <main className={mainClasses.ajust}>
+        <div className={classes.content}>
+          <div className={classes.column}>
+            <div className={classes.image}>
+              <Image
+                src="/img/home/carousel/slides-images/inticoin-wallet.png"
+                layout="responsive"
+                width={20}
+                height={20}
+                priority
+                alt="character 1"
+              />
             </div>
-            <div className={classes.buttonBox}>
-              <Buttons />
+          </div>
+          <div className={classes.column}>
+            <div className={classes.text}>
+              <h1>Instala tu billetera y recibe Inticoin's</h1>
+              <h3>Participa desde ahora con nuestro desarrollo.</h3>
+
+              <div className={classes.buttonBox}>
+                <InstallButton />
+              </div>
             </div>
           </div>
         </div>
-        <div className={classes.column}>
-          <div className={classes.image}>
-            <Image
-              src="/img/home/carousel/slides-images/character-1.png"
-              layout="fill"
-              priority
-              alt="character 1"
-            />
-          </div>
+        <div className={mainClasses.ajust__utility}>
+          <UtilityUse />
         </div>
       </main>
     </>

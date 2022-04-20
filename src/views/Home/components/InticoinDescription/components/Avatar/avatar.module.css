@@ -1,0 +1,17 @@
+.aboutUs__avatar {
+  position: absolute;
+  bottom: 0;
+  right: 15%;
+}
+
+.aboutUs__avatar div {
+  position: relative;
+  width: 100%;
+  min-width: 18rem;
+}
+
+@media (min-width: 1px) and (max-width: 1250px) {
+  .aboutUs__avatar {
+    display: none;
+  }
+}

@@ -2,7 +2,7 @@ import Image from "next/image";
 import classes from "./third-slide.module.css";
 import Link from "next/link";
 import mainClasses from "../../../carousel.module.css";
-import { UtilityUse } from "../components/UtilityUse/UtilityUse";
+import { UtilityUse } from "../../UtilityUse/UtilityUse";
 
 export const ThirdSlide = () => {
   return (
@@ -57,9 +57,9 @@ export const ThirdSlide = () => {
             </div>
           </div>
         </div>
-        <div className={mainClasses.ajust__utility}>
+        {/* <div className={mainClasses.ajust__utility}>
           <UtilityUse />
-        </div>
+        </div> */}
       </main>
     </>
   );

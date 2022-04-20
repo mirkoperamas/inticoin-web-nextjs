@@ -6,6 +6,7 @@ import { FirstSlide } from "./components/slides/FirstSlide/FirstSlide";
 import { SecondSlide } from "./components/slides/SecondSlide/SecondSlide";
 import { ThirdSlide } from "./components/slides/ThirdSlide/ThirdSlide";
 import { FourthSlide } from "./components/slides/FourthSlide/FourthSlide";
+import { UtilityUse } from "./components/UtilityUse/UtilityUse";
 
 export const Carousel = () => {
   const slideshow = useRef(null);
@@ -85,7 +86,7 @@ export const Carousel = () => {
     ) {
       setInterval(() => {
         after();
-      }, 10000);
+      }, 15000);
     }
   }, []);
 
@@ -105,6 +106,9 @@ export const Carousel = () => {
           <div className={classes.slide}>
             <FourthSlide />
           </div>
+        </div>
+        <div className={classes.utility__container}>
+          <UtilityUse />
         </div>
       </div>
       <Controls before={before} after={after} />

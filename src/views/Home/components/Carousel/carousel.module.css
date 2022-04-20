@@ -37,3 +37,9 @@
   height: 30vh;
   overflow: hidden;
 }
+
+.utility__container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UtilityUse } from "../components/UtilityUse/UtilityUse";
+import { UtilityUse } from "../../UtilityUse/UtilityUse";
 import { InstallButton } from "./components/InstallButton/InstallButton";
 import classes from "./first-slide.module.css";
 import mainClasses from "../../../carousel.module.css";
@@ -46,9 +46,9 @@ export const FirstSlide = () => {
             </div>
           </div>
         </div>
-        <div className={mainClasses.ajust__utility}>
+        {/* <div className={mainClasses.ajust__utility}>
           <UtilityUse />
-        </div>
+        </div> */}
       </main>
     </>
   );

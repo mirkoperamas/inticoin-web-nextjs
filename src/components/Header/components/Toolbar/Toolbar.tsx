@@ -28,18 +28,23 @@ export const Toolbar = () => {
               </li>
             </a>
           </Link> */}
+          {/* <Link href="/call">
+            <a className={router.pathname == "/call" ? classes.active : ""}>
+              <li>
+                <p>Swap</p>
+              </li>
+            </a>
+          </Link> */}
+          <a onClick={() => setPaper(true)}>
+            <li>
+              <p>Swap</p>
+            </li>
+          </a>
           <a onClick={() => setPaper(true)}>
             <li>
               <p>Venta NFT</p>
             </li>
           </a>
-          <Link href="/call">
-            <a className={router.pathname == "/call" ? classes.active : ""}>
-              <li>
-                <p>Convocatoria</p>
-              </li>
-            </a>
-          </Link>
           <Link href="/about-us">
             <a className={router.pathname == "/about-us" ? classes.active : ""}>
               <li>

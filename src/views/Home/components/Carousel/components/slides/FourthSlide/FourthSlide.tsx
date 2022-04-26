@@ -1,12 +1,32 @@
 import Image from "next/image";
-import classes from "./fourth-slide.module.css";
-import mainClasses from "../../../carousel.module.css";
-import { UtilityUse } from "../../UtilityUse/UtilityUse";
+import classes from "./fourth-slide.module.scss";
 
 export const FourthSlide = () => {
   return (
     <>
-      <div className={classes.background}>
+      <div className={classes.background}></div>
+      <section className={classes.secondSlide}>
+        <div className={classes.secondSlide__textContent}>
+          <div className={classes.secondSlide__textContent__text}>
+            <h1>
+              Inticoin utilizara UTXO seguridad mientras habilita multiples
+              maquinas virtuales incluidas EVM y ARM VM
+            </h1>
+          </div>
+        </div>
+        <div className={classes.secondSlide__image}>
+          <div>
+            <Image
+              src="/img/home/carousel/slides-images/laptop.png"
+              layout="responsive"
+              width={20}
+              height={25}
+              alt="intichain-coin"
+            />
+          </div>
+        </div>
+      </section>
+      {/* <div className={classes.background}>
         <div className={classes.backgroundImage}>
           <div>
             <Image
@@ -43,10 +63,7 @@ export const FourthSlide = () => {
             </div>
           </div>
         </div>
-        {/* <div className={mainClasses.ajust__utility}>
-          <UtilityUse />
-        </div> */}
-      </main>
+      </main> */}
     </>
   );
 };

@@ -1,0 +1,16 @@
+/*
+  Typography
+  ==========================================================================
+*/
+
+@font-face {
+  font-family: "VT323";
+  src: url("../fonts/VT323/VT323-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // padding: 0;
+  font-family: "VT323", monospace;
+}

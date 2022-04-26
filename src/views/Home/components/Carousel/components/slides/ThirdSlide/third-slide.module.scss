@@ -1,0 +1,86 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.background {
+  position: relative;
+  @include utilities.background-image-params(
+    "/img/home/carousel/banner-3.jpg",
+    center,
+    no-repeat,
+    cover
+  );
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.4);
+
+  @include breakpoints.min-large {
+    background-size: 100% 100%;
+  }
+}
+
+.thirdSlide {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - (hvalues.$header-mobile-h + hvalues.$utility-mobile-h));
+  top: 0;
+  z-index: 100;
+  margin-top: hvalues.$header-mobile-h;
+
+  &__textContent {
+    width: 100%;
+    height: 100%;
+    @include utilities.flexbox-params(flex, center, center);
+
+    &__text {
+      padding: 2% 6%;
+      text-align: center;
+      color: colors.$white;
+      text-shadow: 1px 1px 1px colors.$dark;
+      & h1 {
+        font-size: 40px;
+        @include breakpoints.min-medium {
+          font-size: 70px;
+        }
+        @include breakpoints.min-large {
+          padding-top: 5%;
+        }
+      }
+      & h3 {
+        font-size: 25px;
+        margin-top: 2.5rem;
+        @include breakpoints.min-medium {
+          font-size: 40px;
+        }
+        @include breakpoints.min-large {
+          font-size: 30px;
+          text-align: start;
+        }
+      }
+      & strong {
+        color: colors.$primary;
+      }
+      &Icon {
+        width: 70%;
+        max-width: 15rem;
+        margin: 0 auto;
+        @include breakpoints.min-medium {
+          max-width: 30rem;
+        }
+      }
+
+      @include breakpoints.min-large {
+        padding: 2% 25%;
+        text-align: start;
+      }
+    }
+  }
+  @include breakpoints.min-large {
+    @include utilities.flexbox-params(flex, center, center);
+    height: calc(100vh - (hvalues.$header-h + hvalues.$utility-h));
+    margin-top: hvalues.$header-h;
+  }
+}

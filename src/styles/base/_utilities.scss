@@ -1,0 +1,36 @@
+/* Utilities
+   ========================================================================== */
+
+@mixin truncate-lines($size) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $size;
+  overflow: hidden;
+}
+
+@mixin flexbox-params($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid-params($display, $columns, $row-g, $column-g) {
+  display: $display;
+  grid-template-columns: $columns;
+  row-gap: $row-g;
+  column-gap: $column-g;
+}
+
+@mixin background-image-params($url, $position, $repeat, $size) {
+  background-image: url($url);
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $size;
+}
+
+@mixin font-params($color, $size, $weight, $line-h) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-h;
+}

@@ -1,0 +1,314 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.background {
+  position: relative;
+  @include utilities.background-image-params(
+    "/img/home/roadmap/background.png",
+    center,
+    no-repeat,
+    cover
+  );
+  width: 100%;
+  height: 100vh;
+  // filter: brightness(0.4);
+
+  @include breakpoints.min-large {
+    background-size: 100% 100%;
+  }
+}
+
+.roadmap {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  min-width: breakpoints.$screen-xxs;
+  height: 100vh;
+
+  &__title {
+    margin-top: hvalues.$header-mobile-h;
+    width: 100%;
+    height: 4rem;
+
+    & h1 {
+      text-align: center;
+      font-size: 40px;
+      text-shadow: 1px 1px 1px colors.$dark;
+      color: colors.$secondary;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  min-width: breakpoints.$screen-xxs;
+  height: calc(100vh - (hvalues.$header-mobile-h + 4rem));
+  overflow: hidden;
+
+  &__slideshow {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__slide {
+      position: relative;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      transition: 0.3s ease all;
+      z-index: 10;
+      @include utilities.flexbox-params(flex, center, center);
+
+      &Card {
+        position: relative;
+        width: 100%;
+        min-width: breakpoints.$screen-xxs;
+        max-width: breakpoints.$screen-xs;
+        height: 100%;
+
+        &__sign {
+          position: absolute;
+          z-index: 1;
+          top: 5%;
+          left: 15%;
+          width: calc(100% - 30%);
+          min-width: calc(breakpoints.$screen-xxs - 30%);
+          max-width: breakpoints.$screen-xs;
+          height: 10rem;
+
+          &Title {
+            position: absolute;
+            z-index: 2;
+            top: 10%;
+            text-align: center;
+            color: colors.$primary;
+            width: 100%;
+            padding: 0 10%;
+
+            & h2 {
+              font-size: 14px;
+              @include breakpoints.min-x-small {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+
+        &__card {
+          position: absolute;
+          width: 100%;
+          z-index: 10;
+          margin-top: 35%;
+
+          &Text {
+            position: absolute;
+            z-index: 11;
+            top: 41%;
+            left: 15%;
+            width: calc(100% - 33%);
+            min-width: calc(breakpoints.$screen-xxs - 33%);
+            & p {
+              font-size: 12px;
+              @include utilities.truncate-lines(14);
+              @include breakpoints.min-x-small {
+                @include utilities.truncate-lines(19);
+              }
+            }
+          }
+
+          &Q {
+            position: absolute;
+            z-index: 11;
+            width: 100%;
+            bottom: 3%;
+
+            & h1 {
+              font-size: 35px;
+              color: colors.$secondary;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .ajust {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   box-sizing: border-box;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .background {
+//   position: relative;
+//   width: 100%;
+//   height: 100vh;
+// }
+
+// .backgroundImage {
+//   position: absolute;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+//   /* opacity: 0.2; */
+// }
+
+// .backgroundImage div {
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+// }
+
+// .content {
+//   position: relative;
+//   z-index: 100;
+//   width: 100%;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+// .content h1 {
+//   position: absolute;
+//   color: rgb(50, 11, 2);
+//   font-size: 50px;
+//   padding: 5% 0 0 5%;
+//   text-shadow: 1px 1px 1px #000;
+//   font-style: italic;
+// }
+
+// .contentCards {
+//   width: 100%;
+//   height: 100%;
+//   display: grid;
+//   align-items: flex-end;
+//   grid-template-columns: repeat(4, 1fr);
+//   column-gap: 3%;
+//   position: relative;
+//   bottom: 3%;
+// }
+
+// .contentCards__card {
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .contentCards__cardTitle {
+//   width: 100%;
+//   position: relative;
+//   margin-bottom: -20%;
+//   margin-left: 8%;
+// }
+
+// .contentCards__cardQ {
+//   position: absolute;
+//   top: 10%;
+//   right: 15%;
+//   color: #fff;
+//   text-shadow: 1px 1px 1px #000;
+// }
+
+// .contentCards__cardTitle__image {
+//   position: relative;
+//   width: 100%;
+//   max-width: 15rem;
+// }
+
+// .contentCards__cardTitle__text {
+//   position: absolute;
+//   width: 100%;
+//   top: 12%;
+//   left: 5%;
+//   max-width: 12rem;
+//   color: #fff;
+// }
+
+// .contentCards__cardTitle__text h4 {
+//   margin: 0;
+//   text-transform: uppercase;
+// }
+// .contentCards__cardTitle__text h3 {
+//   margin: 0;
+//   text-transform: uppercase;
+//   text-align: end;
+// }
+
+// .contentCards__cardImage {
+//   width: 100%;
+//   max-width: 20rem;
+//   position: relative;
+// }
+
+// .contentCards__cardImage__text {
+//   position: absolute;
+//   top: 41%;
+//   margin: 0 15%;
+// }
+
+// .contentCards__cardImage__text p {
+//   margin: 0;
+//   font-size: 12px;
+// }
+
+// .ave {
+//   position: absolute;
+//   z-index: 1000;
+//   top: 18%;
+//   right: 5%;
+//   width: 14rem;
+//   display: inline-block;
+//   transition: transform 2s ease-out;
+// }
+
+// #firstCard:hover #firstAve {
+//   transform: translateX(-620%);
+//   opacity: 1;
+// }
+// #firstCard:hover #firstCard p,
+// #secondAve,
+// #thirdAve,
+// #fourthAve {
+//   opacity: 0;
+// }
+
+// #secondCard:hover #secondAve {
+//   transform: translateX(-420%);
+//   opacity: 1;
+// }
+// #secondCard:hover #secondCard p,
+// #firstAve,
+// #thirdAve,
+// #fourthAve {
+//   opacity: 0;
+// }
+
+// #thirdCard:hover #thirdAve {
+//   transform: translateX(-220%);
+//   opacity: 1;
+// }
+// #thirdCard:hover #thirdCard p,
+// #firstAve,
+// #secondtAve,
+// #fourthAve {
+//   opacity: 0;
+// }
+
+// #fourthCard:hover #fourthAve {
+//   transform: translateX(-20%);
+//   opacity: 1;
+// }
+// #fourthCard:hover #fourthCard p,
+// #firstAve,
+// #secondtAve,
+// #thirdAve {
+//   opacity: 0;
+// }

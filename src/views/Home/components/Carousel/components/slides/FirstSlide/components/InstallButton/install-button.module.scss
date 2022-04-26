@@ -1,0 +1,30 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.button {
+  outline: none;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    colors.$primary 0%,
+    colors.$secondary 25%,
+    colors.$primary 50%,
+    colors.$secondary 75%,
+    colors.$primary 100%
+  );
+  color: colors.$deg-brown-light;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #000;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include breakpoints.min-medium {
+    font-size: 25px;
+  }
+}

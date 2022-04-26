@@ -1,0 +1,39 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.controls {
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  width: 100%;
+  @include utilities.flexbox-params(flex, center, space-between);
+  z-index: zIndex.$carousel-controls;
+
+  & button {
+    pointer-events: all;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+    & > div {
+      max-width: 1.5rem;
+      @include breakpoints.min-large {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__leftButton {
+    transform: rotate(180deg);
+  }
+
+  @include breakpoints.min-large {
+    display: none;
+  }
+}

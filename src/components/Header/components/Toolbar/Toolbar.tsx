@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classes from "./toolbar.module.css";
+import classes from "./toolbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Informative } from "../../../modals/Informative/Informative";
@@ -19,32 +19,20 @@ export const Toolbar = () => {
               </li>
             </a>
           </Link>
-          {/* <Link href="/crowdsale">
-            <a
-              className={router.pathname == "/crowdsale" ? classes.active : ""}
-            >
-              <li>
-                <p>Crowdsale</p>
-              </li>
-            </a>
-          </Link> */}
-          {/* <Link href="/call">
-            <a className={router.pathname == "/call" ? classes.active : ""}>
+          <Link href="/swap">
+            <a className={router.pathname == "/swap" ? classes.active : ""}>
               <li>
                 <p>Swap</p>
               </li>
             </a>
-          </Link> */}
-          <a onClick={() => setPaper(true)}>
-            <li>
-              <p>Swap</p>
-            </li>
-          </a>
-          <a onClick={() => setPaper(true)}>
-            <li>
-              <p>Venta NFT</p>
-            </li>
-          </a>
+          </Link>
+          <Link href="/inti-nft">
+            <a className={router.pathname == "/inti-nft" ? classes.active : ""}>
+              <li>
+                <p>Venta NFT</p>
+              </li>
+            </a>
+          </Link>
           <Link href="/about-us">
             <a className={router.pathname == "/about-us" ? classes.active : ""}>
               <li>
@@ -52,13 +40,11 @@ export const Toolbar = () => {
               </li>
             </a>
           </Link>
-          {/* <Link href="/">
-            <a href="https://intichain.io/" target="_blank">
-              <li id={classes.intichain}>
-                <p>Intichain</p>
-              </li>
-            </a>
-          </Link> */}
+          <a onClick={() => setPaper(true)}>
+            <li>
+              <p>Inti</p>
+            </li>
+          </a>
         </ul>
       </div>
 

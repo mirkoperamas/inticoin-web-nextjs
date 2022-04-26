@@ -9,7 +9,7 @@ export const Description = () => {
       <div className={classes.aboutUs__descriptionImage}>
         <div className={classes.aboutUs__descriptionImage__content}>
           <Image
-            src="/img/about-us/inti-image.png"
+            src="/img/home/inticoin-description/inti-image.png"
             layout="responsive"
             width={37}
             height={20}

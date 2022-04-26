@@ -1,0 +1,55 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+
+.toolbar {
+  width: 100%;
+  position: relative;
+  width: 27rem;
+  margin: 2.4rem auto 0 auto;
+  @include utilities.flexbox-params(flex, auto, center);
+
+  & a {
+    width: 100%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-image: linear-gradient(
+        to left,
+        colors.$secondary 0%,
+        colors.$primary 100%
+      )
+      1;
+    transform: skewX(-20deg);
+    padding: 0.05rem 0;
+    transition: 0.5s;
+    text-shadow: 1px 1px 1px colors.$dark;
+  }
+
+  & a:hover {
+    background: colors.$deg-yellow;
+  }
+
+  & ul {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2%;
+  }
+
+  & p {
+    color: colors.$secondary;
+    margin: 0;
+    transform: skewX(20deg);
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.active {
+  background: colors.$deg-yellow;
+}

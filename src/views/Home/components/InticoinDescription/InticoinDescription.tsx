@@ -12,7 +12,7 @@ export const InticoinDescription = () => {
       <div className={classes.background}>
         <div>
           <Image
-            src="/img/about-us/background.png"
+            src="/img/home/inticoin-description/background.png"
             layout="fill"
             objectFit="cover"
             alt="about us background"

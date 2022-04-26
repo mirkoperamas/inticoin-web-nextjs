@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className={classes.image}>
             <div>
               <Image
-                src="/img/home/inticoin-icon.png"
+                src="/img/inticoin-icon.png"
                 width={200}
                 height={35}
                 alt="inticoin icon"
@@ -36,7 +36,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/fb-icon.png"
+                    src="/img/footer/fb-icon.png"
                     width={35}
                     height={35}
                     alt="facebook icon"
@@ -50,7 +50,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/twitter-icon.png"
+                    src="/img/footer/twitter-icon.png"
                     width={35}
                     height={35}
                     alt="twitter icon"
@@ -64,7 +64,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/inst-icon.png"
+                    src="/img/footer/inst-icon.png"
                     width={35}
                     height={35}
                     alt="instagram icon"
@@ -74,7 +74,7 @@ export const Footer = () => {
               <a href="https://t.me/inticoin" target="_blank" rel="noreferrer">
                 <div>
                   <Image
-                    src="/img/home/footer/telegram-icon.png"
+                    src="/img/footer/telegram-icon.png"
                     width={35}
                     height={35}
                     alt="telegram icon"
@@ -88,7 +88,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/discord-icon.png"
+                    src="/img/footer/discord-icon.png"
                     width={35}
                     height={35}
                     alt="discord icon"
@@ -102,7 +102,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/youtube-icon.png"
+                    src="/img/footer/youtube-icon.png"
                     width={35}
                     height={35}
                     alt="youtube icon"
@@ -116,7 +116,7 @@ export const Footer = () => {
               >
                 <div>
                   <Image
-                    src="/img/home/footer/reddit-icon.png"
+                    src="/img/footer/reddit-icon.png"
                     width={35}
                     height={35}
                     alt="reddit icon"

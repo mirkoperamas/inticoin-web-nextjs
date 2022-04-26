@@ -1,4 +1,4 @@
-import classes from "./loader.module.css";
+import classes from "./loader.module.scss";
 import { useEffect, useState } from "react";
 // import { useStyle } from "../../utils/useStyle";
 

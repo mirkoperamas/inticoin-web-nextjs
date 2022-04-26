@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./utility-use.module.css";
+import classes from "./utility-use.module.scss";
 import Image from "next/image";
 
 export const UtilityUse = () => {
@@ -8,9 +8,9 @@ export const UtilityUse = () => {
       <div className={classes.utilityUse__container}>
         <div className={classes.utilityUse__containerDescription}>
           <h4>UTILITY</h4>
-          <h2>USA YOUT INTI</h2>
+          <h2>USA TU INTI</h2>
           <p>
-            IntiCoin, nacida el 1 de junio de 2021, será una red blockchain
+            IntiCoin, nacido el 01 de junio del 2021, será una red blockchain
             descentralizada para admitir contratos inteligentes de alto
             rendimiento. Estamos desarrollando un futuro que permitirá a los
             desarrolladores implementar sus propias aplicaciones

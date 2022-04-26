@@ -17,7 +17,7 @@ export const WalletValues = () => {
               }
             >
               <Image
-                src="/img/about-us/20.png"
+                src="/img/home/inticoin-description/20.png"
                 layout="responsive"
                 width={100}
                 height={25}
@@ -37,7 +37,7 @@ export const WalletValues = () => {
               }
             >
               <Image
-                src="/img/about-us/10.png"
+                src="/img/home/inticoin-description/10.png"
                 layout="responsive"
                 width={100}
                 height={25}
@@ -57,7 +57,7 @@ export const WalletValues = () => {
               }
             >
               <Image
-                src="/img/about-us/10.png"
+                src="/img/home/inticoin-description/10.png"
                 layout="responsive"
                 width={100}
                 height={25}
@@ -77,7 +77,7 @@ export const WalletValues = () => {
               }
             >
               <Image
-                src="/img/about-us/20.png"
+                src="/img/home/inticoin-description/20.png"
                 layout="responsive"
                 width={100}
                 height={25}
@@ -123,7 +123,7 @@ export const WalletValues = () => {
             }
           >
             <Image
-              src="/img/about-us/wallet.png"
+              src="/img/home/inticoin-description/wallet.png"
               layout="responsive"
               width={50}
               height={55}

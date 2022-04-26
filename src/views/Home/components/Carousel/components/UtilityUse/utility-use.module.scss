@@ -1,0 +1,125 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.utilityUse {
+  position: relative;
+  width: 100%;
+  height: hvalues.$utility-mobile-h;
+  min-height: hvalues.$utility-mobile-h;
+  background: colors.$brown;
+  border-top-left-radius: 5rem;
+  opacity: 0.8;
+  z-index: zIndex.$carousel-utility;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    color: colors.$primary;
+
+    &Description {
+      width: 100%;
+      border-top-left-radius: 5rem;
+      padding: 2% 6%;
+      flex-direction: column;
+      background: linear-gradient(
+        90deg,
+        colors.$deg-brown-light 0%,
+        colors.$deg-brown-dark 94%
+      );
+      & h4,
+      h2 {
+        margin: 0;
+        text-transform: uppercase;
+      }
+      & h4 {
+        font-size: 12px;
+        @include breakpoints.min-large {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      & h2 {
+        font-size: 18px;
+        @include breakpoints.min-large {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      & p {
+        font-size: 11px;
+        @include utilities.truncate-lines(4);
+
+        @include breakpoints.min-large {
+          font-size: 12px;
+          margin-top: 2%;
+          @include utilities.truncate-lines(10);
+        }
+      }
+
+      @include breakpoints.small {
+        text-align: end;
+      }
+
+      @include breakpoints.min-large {
+        padding: 0.5% 3%;
+      }
+    }
+
+    &Features {
+      width: 100%;
+      padding: 2% 6%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4%;
+      background: linear-gradient(
+        90deg,
+        rgba(136, 84, 62, 0.6) 0%,
+        rgba(60, 11, 0, 0.4) 94%
+      );
+      &_object {
+        width: 100%;
+
+        &Image {
+          width: 100%;
+          max-width: 1.2rem;
+          margin: 0 auto;
+
+          // @include breakpoints.min-large {
+          //   max-width: 1.5rem;
+          // }
+        }
+
+        &Text p {
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          font-size: 8.5px;
+          @include utilities.truncate-lines(3);
+
+          @include breakpoints.min-large {
+            @include utilities.truncate-lines(4);
+          }
+        }
+      }
+
+      @include breakpoints.min-large {
+        border-top-left-radius: 5rem;
+        padding: 0.5% 3%;
+      }
+    }
+
+    @include breakpoints.min-large {
+      display: flex;
+    }
+  }
+
+  @include breakpoints.min-large {
+    height: hvalues.$utility-h;
+    min-height: hvalues.$utility-h;
+  }
+}

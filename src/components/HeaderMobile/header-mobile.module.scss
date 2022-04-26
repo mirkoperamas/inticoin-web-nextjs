@@ -1,0 +1,73 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.header {
+  display: none;
+  margin: 0;
+  position: fixed;
+  z-index: zIndex.$header;
+  width: 100%;
+
+  @include breakpoints.large {
+    display: block;
+  }
+}
+
+.header__menu {
+  width: 100%;
+  height: hvalues.$header-mobile-h;
+  @include utilities.background-image-params(
+    "/img/header/header-mobile.png",
+    center,
+    no-repeat,
+    100% 100%
+  );
+  @include utilities.flexbox-params(flex, center, auto);
+
+  & > div {
+    @include utilities.flexbox-params(flex, center, center);
+    margin-left: 3%;
+  }
+
+  &MenuIcon {
+    cursor: pointer;
+    width: 1.5rem;
+    margin-right: 4%;
+  }
+
+  &LogoIcon {
+    cursor: pointer;
+    width: 8rem;
+  }
+}
+
+.header__links {
+  background: colors.$dark;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s height;
+  width: 100%;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  & li {
+    box-shadow: 2px 2px 1px colors.$primary;
+    padding: 1.3rem;
+  }
+
+  & a {
+    color: colors.$secondary;
+  }
+}
+
+.visible {
+  height: 290px;
+}

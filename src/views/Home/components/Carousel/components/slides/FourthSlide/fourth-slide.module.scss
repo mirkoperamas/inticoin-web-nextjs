@@ -1,0 +1,88 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.background {
+  position: relative;
+  @include utilities.background-image-params(
+    "/img/home/carousel/banner-4.jpg",
+    center,
+    no-repeat,
+    cover
+  );
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.4);
+
+  @include breakpoints.min-large {
+    background-size: 100% 100%;
+  }
+}
+
+.secondSlide {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - (hvalues.$header-mobile-h + hvalues.$utility-mobile-h));
+  top: 0;
+  z-index: 100;
+  margin-top: hvalues.$header-mobile-h;
+
+  &__textContent {
+    width: 100%;
+    height: 60%;
+    @include utilities.flexbox-params(flex, center, center);
+    flex-direction: column;
+
+    &__text {
+      padding: 2% 6%;
+      text-align: center;
+      color: colors.$primary;
+      text-shadow: 1px 1px 1px colors.$dark;
+      & h1 {
+        font-size: 28px;
+        margin-top: 2rem;
+        @include breakpoints.min-medium {
+          font-size: 50px;
+        }
+        @include breakpoints.min-large {
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 50%;
+    max-width: 15rem;
+    margin: 0 auto;
+    & div {
+      margin-top: -45%;
+      @include breakpoints.min-medium {
+        margin-top: -45%;
+      }
+    }
+    @include breakpoints.min-medium {
+      max-width: 18rem;
+    }
+    @include breakpoints.min-large {
+      max-width: 25rem;
+    }
+  }
+
+  @include breakpoints.min-large {
+    @include utilities.flexbox-params(flex, center, center);
+
+    & > div {
+      width: 50%;
+    }
+  }
+
+  @include breakpoints.min-large {
+    @include utilities.flexbox-params(flex, center, center);
+    height: calc(100vh - (hvalues.$header-h + hvalues.$utility-h));
+    margin-top: hvalues.$header-h;
+  }
+}

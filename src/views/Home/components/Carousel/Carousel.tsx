@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import classes from "./carousel.module.css";
+import classes from "./carousel.module.scss";
 import Image from "next/image";
 import { Controls } from "./components/Controls/Controls";
 import { FirstSlide } from "./components/slides/FirstSlide/FirstSlide";
@@ -78,40 +78,40 @@ export const Carousel = () => {
     }
   };
 
-  useEffect(() => {
-    if (
-      slideshow.current !== null &&
-      slideshow.current !== "" &&
-      slideshow.current !== undefined
-    ) {
-      setInterval(() => {
-        after();
-      }, 15000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     slideshow.current !== null &&
+  //     slideshow.current !== "" &&
+  //     slideshow.current !== undefined
+  //   ) {
+  //     setInterval(() => {
+  //       after();
+  //     }, 15000);
+  //   }
+  // }, []);
 
   return (
     <>
-      <div className={classes.container}>
-        <div className={classes.slideshow} ref={slideshow}>
-          <div className={classes.slide}>
+      <div className={classes.carousel}>
+        <div className={classes.carousel__slideshow} ref={slideshow}>
+          <div className={classes.carousel__slideshow__slide}>
             <FirstSlide />
           </div>
-          <div className={classes.slide}>
+          <div className={classes.carousel__slideshow__slide}>
             <SecondSlide />
           </div>
-          <div className={classes.slide}>
+          <div className={classes.carousel__slideshow__slide}>
             <ThirdSlide />
           </div>
-          <div className={classes.slide}>
+          <div className={classes.carousel__slideshow__slide}>
             <FourthSlide />
           </div>
         </div>
-        <div className={classes.utility__container}>
+        <div className={classes.carousel__utility}>
           <UtilityUse />
         </div>
+        <Controls before={before} after={after} />
       </div>
-      <Controls before={before} after={after} />
     </>
   );
 };

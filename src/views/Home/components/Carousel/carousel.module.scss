@@ -1,0 +1,33 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__slideshow {
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__slide {
+      position: relative;
+      min-width: 100%;
+      min-height: 100vh;
+      overflow: hidden;
+      transition: 0.3s ease all;
+      z-index: 10;
+    }
+  }
+
+  &__utility {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

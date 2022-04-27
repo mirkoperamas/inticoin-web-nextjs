@@ -24,7 +24,7 @@
     & > div {
       max-width: 1.5rem;
       @include breakpoints.min-large {
-        max-width: 100%;
+        max-width: 2rem;
       }
     }
   }

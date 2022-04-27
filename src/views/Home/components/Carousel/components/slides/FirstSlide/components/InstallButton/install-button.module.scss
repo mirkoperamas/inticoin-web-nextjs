@@ -24,7 +24,7 @@
   border-radius: 10px;
   cursor: pointer;
 
-  @include breakpoints.min-medium {
-    font-size: 25px;
+  @include breakpoints.min-xxxl-large {
+    font-size: 20px;
   }
 }

@@ -41,6 +41,9 @@
           font-size: 16px;
           text-align: center;
         }
+        @include breakpoints.min-xxxl-large {
+          font-size: 20px;
+        }
       }
       & h2 {
         font-size: 18px;
@@ -48,15 +51,21 @@
           font-size: 20px;
           text-align: center;
         }
+        @include breakpoints.min-xxxl-large {
+          font-size: 24px;
+        }
       }
       & p {
         font-size: 11px;
         @include utilities.truncate-lines(4);
 
         @include breakpoints.min-large {
-          font-size: 12px;
+          font-size: 14px;
           margin-top: 2%;
           @include utilities.truncate-lines(10);
+        }
+        @include breakpoints.min-xxxl-large {
+          font-size: 18px;
         }
       }
 
@@ -89,9 +98,9 @@
           max-width: 1.2rem;
           margin: 0 auto;
 
-          // @include breakpoints.min-large {
-          //   max-width: 1.5rem;
-          // }
+          @include breakpoints.min-xxxl-large {
+            max-width: 1.5rem;
+          }
         }
 
         &Text p {
@@ -103,6 +112,10 @@
 
           @include breakpoints.min-large {
             @include utilities.truncate-lines(4);
+            font-size: 11px;
+          }
+          @include breakpoints.min-xxxl-large {
+            font-size: 14px;
           }
         }
       }
@@ -121,5 +134,9 @@
   @include breakpoints.min-large {
     height: hvalues.$utility-h;
     min-height: hvalues.$utility-h;
+  }
+
+  @include breakpoints.min-xxxl-large {
+    height: hvalues.$utility-max-h;
   }
 }

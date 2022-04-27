@@ -9,8 +9,8 @@ export const HomeView = () => {
     <div className={classes.HomeView}>
       <Carousel />
       <Roadmap />
-      <InticoinDescription />
-      <Footer />
+      {/* <InticoinDescription /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

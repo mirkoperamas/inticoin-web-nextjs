@@ -7,8 +7,8 @@
 .toolbar {
   width: 100%;
   position: relative;
-  width: 27rem;
-  margin: 2.4rem auto 0 auto;
+  width: 22.5rem;
+  margin: 2rem auto 0 auto;
   @include utilities.flexbox-params(flex, auto, center);
 
   & a {
@@ -45,8 +45,17 @@
     color: colors.$secondary;
     margin: 0;
     transform: skewX(20deg);
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
+
+    @include breakpoints.min-xxxl-large {
+      font-size: 15px;
+    }
+  }
+
+  @include breakpoints.min-xxxl-large {
+    width: 28rem;
+    margin: 2.4rem auto 0 auto;
   }
 }
 

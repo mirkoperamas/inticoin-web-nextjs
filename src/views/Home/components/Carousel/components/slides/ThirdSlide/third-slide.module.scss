@@ -42,11 +42,12 @@
       text-shadow: 1px 1px 1px colors.$dark;
       & h1 {
         font-size: 40px;
-        @include breakpoints.min-medium {
-          font-size: 70px;
-        }
+
         @include breakpoints.min-large {
           padding-top: 5%;
+        }
+        @include breakpoints.min-xxxl-large {
+          font-size: 60px;
         }
       }
       & h3 {
@@ -55,8 +56,8 @@
         @include breakpoints.min-medium {
           font-size: 40px;
         }
-        @include breakpoints.min-large {
-          font-size: 30px;
+        @include breakpoints.min-xxxl-large {
+          font-size: 40px;
           text-align: start;
         }
       }
@@ -67,7 +68,7 @@
         width: 70%;
         max-width: 15rem;
         margin: 0 auto;
-        @include breakpoints.min-medium {
+        @include breakpoints.min-xxxl-large {
           max-width: 30rem;
         }
       }

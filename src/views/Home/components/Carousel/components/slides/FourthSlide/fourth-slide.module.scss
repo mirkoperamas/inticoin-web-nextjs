@@ -44,13 +44,19 @@
       & h1 {
         font-size: 28px;
         margin-top: 2rem;
-        @include breakpoints.min-medium {
-          font-size: 50px;
-        }
+
         @include breakpoints.min-large {
           text-align: start;
         }
+        @include breakpoints.min-xxxl-large {
+          font-size: 50px;
+          text-align: end;
+        }
       }
+    }
+
+    @include breakpoints.min-large {
+      padding: 0 0 0 3%;
     }
   }
 
@@ -67,8 +73,8 @@
     @include breakpoints.min-medium {
       max-width: 18rem;
     }
-    @include breakpoints.min-large {
-      max-width: 25rem;
+    @include breakpoints.min-xxxl-large {
+      max-width: 23rem;
     }
   }
 

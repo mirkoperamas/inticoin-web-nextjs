@@ -9,6 +9,7 @@
   position: fixed;
   right: 0;
   left: 0;
+  height: hvalues.$header-h;
   z-index: zIndex.$header;
   background: colors.$deg-dark;
   backdrop-filter: blur(0.5rem);
@@ -18,12 +19,15 @@
     no-repeat,
     cover
   );
-  height: hvalues.$header-h;
 
   &__logo {
     width: 100%;
-    max-width: 10rem;
+    max-width: 8rem;
     margin: 0 auto;
+
+    @include breakpoints.min-xxxl-large {
+      max-width: 10rem;
+    }
   }
 
   & > div {
@@ -37,5 +41,9 @@
 
   @include breakpoints.min-xxl-large {
     background-size: 100% 100%;
+  }
+
+  @include breakpoints.min-xxxl-large {
+    height: hvalues.$header-max-h;
   }
 }

@@ -45,11 +45,11 @@
     color: colors.$secondary;
     margin: 0;
     transform: skewX(20deg);
-    font-size: 13px;
+    font-size: 10px;
     font-weight: bold;
 
     @include breakpoints.min-xxxl-large {
-      font-size: 15px;
+      font-size: 13px;
     }
   }
 

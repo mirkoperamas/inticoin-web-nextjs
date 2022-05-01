@@ -42,7 +42,7 @@
       color: colors.$primary;
       text-shadow: 1px 1px 1px colors.$dark;
       & h1 {
-        font-size: 28px;
+        font-size: 25px;
         margin-top: 2rem;
 
         @include breakpoints.min-large {

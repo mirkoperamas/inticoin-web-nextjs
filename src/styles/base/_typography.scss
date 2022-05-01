@@ -8,9 +8,28 @@
   src: url("../fonts/VT323/VT323-Regular.ttf");
 }
 
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   // padding: 0;
+//   font-family: "VT323", monospace;
+// }
+@font-face {
+  font-family: "Typewriter";
+  src: url("../fonts/Typewriter/TYPEWR__.TTF");
+}
+@font-face {
+  font-family: "Typewriter-B";
+  src: url("../fonts/Typewriter/TYPEWR_B.TTF");
+}
+@font-face {
+  font-family: "Ticketing";
+  src: url("../fonts/ticketing/TICKETING/Ticketing.ttf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   // padding: 0;
-  font-family: "VT323", monospace;
+  font-family: "Ticketing", Arial, Helvetica, sans-serif;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./wallet-values.module.css";
+import classes from "./wallet-values.module.scss";
 import Image from "next/image";
 
 export const WalletValues = () => {
@@ -116,7 +116,7 @@ export const WalletValues = () => {
           </div>
         </div>
 
-        <div className={classes.aboutUs__walletValues__graphicColumn}>
+        {/* <div className={classes.aboutUs__walletValues__graphicColumn}>
           <div
             className={
               classes.aboutUs__walletValues__graphicColumn__walletImage
@@ -129,7 +129,16 @@ export const WalletValues = () => {
               height={55}
             />
           </div>
-        </div>
+        </div> */}
+      </div>
+
+      <div className={classes.aboutUs__walletValues__walletImage}>
+        <Image
+          src="/img/home/inticoin-description/wallet.png"
+          layout="responsive"
+          width={50}
+          height={55}
+        />
       </div>
     </div>
   );

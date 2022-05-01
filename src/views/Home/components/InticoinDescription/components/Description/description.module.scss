@@ -1,0 +1,116 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.aboutUs__description {
+  position: relative;
+  width: 100%;
+  // display: flex;
+  // top: 0;
+  // padding-top: 7.9%;
+  // background: rgba(255, 255, 0, 0.121);
+  @include utilities.background-image-params(
+    "/img/home/inticoin-description/inti-image.png",
+    center,
+    no-repeat,
+    cover
+  );
+
+  &Blackcap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.626);
+
+    @include breakpoints.min-large {
+      display: none;
+    }
+  }
+
+  &Image {
+    display: none;
+    @include breakpoints.min-large {
+      display: block;
+      width: 100%;
+      &__content {
+        position: relative;
+        width: 100%;
+        max-width: 25rem;
+        @include breakpoints.min-xxxl-large {
+          max-width: 35rem;
+        }
+      }
+    }
+  }
+
+  &Text {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+    & h1 {
+      font-size: 20px;
+      padding-top: 2rem;
+      @include breakpoints.min-x-small {
+        font-size: 35px;
+      }
+      @include breakpoints.min-large {
+        font-size: 25px;
+        padding-top: 0;
+      }
+    }
+
+    &__content {
+      width: 100%;
+      // border-top-left-radius: 5rem;
+      border-top-left-radius: 3rem;
+      background: linear-gradient(
+        90deg,
+        rgba(136, 84, 62, 0.6) 0%,
+        rgba(60, 11, 0, 0.4) 94%
+      );
+      padding: 2% 8%;
+      opacity: 0.8;
+
+      & p {
+        font-size: 10px;
+        @include breakpoints.min-x-small {
+          font-size: 12px;
+        }
+        @include breakpoints.min-medium {
+          font-size: 15px;
+        }
+        @include breakpoints.min-medium {
+          font-size: 12px;
+        }
+        @include breakpoints.min-xxxl-large {
+          font-size: 15px;
+        }
+      }
+
+      @include breakpoints.min-large {
+        padding: 3% 5%;
+      }
+    }
+
+    &__buttons {
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 4% 0;
+    }
+  }
+
+  @include breakpoints.min-large {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    background: colors.$deg-brown-dark;
+    padding-top: 1rem;
+  }
+}

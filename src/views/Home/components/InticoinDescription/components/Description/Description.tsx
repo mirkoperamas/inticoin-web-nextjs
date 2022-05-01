@@ -1,11 +1,12 @@
 import React from "react";
-import classes from "./description.module.css";
+import classes from "./description.module.scss";
 import Image from "next/image";
 import { Buttons } from "./components/Buttons/Buttons";
 
 export const Description = () => {
   return (
     <div className={classes.aboutUs__description}>
+      <div className={classes.aboutUs__descriptionBlackcap}></div>
       <div className={classes.aboutUs__descriptionImage}>
         <div className={classes.aboutUs__descriptionImage__content}>
           <Image

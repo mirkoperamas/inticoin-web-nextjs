@@ -17,14 +17,20 @@
     colors.$primary 100%
   );
   color: colors.$deg-brown-light;
-  font-size: 11px;
+  font-size: 10px;
   text-shadow: 1px 1px 1px #000;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   text-transform: uppercase;
   border-radius: 10px;
   cursor: pointer;
 
+  @include breakpoints.min-x-small {
+    font-size: 15px;
+  }
+  @include breakpoints.min-large {
+    font-size: 10px;
+  }
   @include breakpoints.min-xxxl-large {
-    font-size: 20px;
+    font-size: 15px;
   }
 }

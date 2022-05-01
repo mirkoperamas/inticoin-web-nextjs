@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Informative } from "../../../../../../../../components/modals/Informative/Informative";
-import classes from "./buttons.module.css";
+import classes from "./buttons.module.scss";
 
 export const Buttons = () => {
   const [contract, setContract] = useState(false);

@@ -1,0 +1,98 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.aboutUs__walletValues {
+  width: 100%;
+  @include utilities.flexbox-params(flex, center, auto);
+  position: absolute;
+  bottom: 40%;
+
+  &__graphic {
+    background: linear-gradient(
+      90deg,
+      colors.$deg-brown-light 0%,
+      colors.$deg-brown-dark 94%
+    );
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+
+    &Column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      &__contain {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        & p {
+          transform: rotate(90deg);
+          font-size: 8px;
+          margin-right: 0.1rem;
+          @include breakpoints.min-xxxl-large {
+            font-size: 10px;
+          }
+        }
+
+        & h3 {
+          font-size: 12px;
+          margin: 0;
+          margin-left: 0.5rem;
+          margin-right: 1rem;
+          line-height: 15px;
+          @include breakpoints.min-xxxl-large {
+            font-size: 17px;
+          }
+        }
+
+        & strong {
+          color: colors.$primary;
+        }
+
+        &Image {
+          min-width: 6rem;
+          @include breakpoints.min-xxxl-large {
+            min-width: 8rem;
+          }
+        }
+      }
+
+      @include breakpoints.min-medium {
+        padding-right: 6rem;
+      }
+    }
+  }
+
+  &__walletImage {
+    display: none;
+    @include breakpoints.min-medium {
+      display: block;
+      // width: 100%;
+      min-width: 10rem;
+      margin: -5.2rem 0 0 -4rem;
+    }
+    @include breakpoints.min-xxxl-large {
+      min-width: 13rem;
+      margin: -6.5rem 0 0 -4rem;
+    }
+  }
+
+  @include breakpoints.min-medium {
+    max-width: 42rem;
+  }
+  @include breakpoints.min-large {
+    max-width: 40rem;
+    bottom: 15%;
+  }
+  @include breakpoints.min-xxxl-large {
+    max-width: 50rem;
+    bottom: 20%;
+  }
+}

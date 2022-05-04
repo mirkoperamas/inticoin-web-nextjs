@@ -54,8 +54,8 @@ export const HeaderMobile = () => {
               </Link>
             </li>
             <li>
-              <Link href="/swap">
-                <a>Swap</a>
+              <Link href="/exchange">
+                <a>Exchange</a>
               </Link>
             </li>
             <li>

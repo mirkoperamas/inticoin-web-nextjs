@@ -4,7 +4,11 @@ import Image from "next/image";
 
 export const WalletValues = () => {
   return (
-    <div className={classes.aboutUs__walletValues}>
+    <div
+      className={classes.aboutUs__walletValues}
+      data-aos="fade-right"
+      data-aos-duration="1500"
+    >
       <div className={classes.aboutUs__walletValues__graphic}>
         <div className={classes.aboutUs__walletValues__graphicColumn}>
           <div

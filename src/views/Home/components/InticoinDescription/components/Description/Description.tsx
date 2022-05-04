@@ -3,7 +3,7 @@ import classes from "./description.module.scss";
 import Image from "next/image";
 import { Buttons } from "./components/Buttons/Buttons";
 
-export const Description = () => {
+export const Description = ({ setPaper }: any) => {
   return (
     <div className={classes.aboutUs__description}>
       <div className={classes.aboutUs__descriptionBlackcap}></div>
@@ -37,7 +37,7 @@ export const Description = () => {
           </div>
         </div>
         <div className={classes.aboutUs__descriptionText__buttons}>
-          <Buttons />
+          <Buttons setPaper={setPaper} />
         </div>
       </div>
     </div>

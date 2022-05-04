@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Updaters } from "../Index";
 import { Header } from "../components/Header/Header";
 import "/src/styles.scss";
+import { Footer } from "../components/Footer/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div style={{ minWidth: "295px" }}>
           <Header />
           <Component {...pageProps} />
+          <Footer />
         </div>
       </Provider>
     </Updaters>

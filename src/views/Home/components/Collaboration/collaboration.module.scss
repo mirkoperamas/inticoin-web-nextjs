@@ -24,6 +24,9 @@
     @include breakpoints.min-large {
       height: 18rem;
     }
+    @include breakpoints.min-xxxl-large {
+      height: 24rem;
+    }
   }
   &__incaImg {
     display: none;
@@ -39,6 +42,9 @@
     @include breakpoints.min-large {
       width: 11rem;
     }
+    @include breakpoints.min-xxxl-large {
+      width: 15rem;
+    }
   }
   &__text {
     position: absolute;
@@ -51,6 +57,7 @@
     padding: 3% 1%;
     & h3 {
       font-size: 13px;
+      text-shadow: 1px 1px 1px colors.$dark;
       @include breakpoints.min-large {
         font-size: 18px;
       }
@@ -77,6 +84,10 @@
       width: 25rem;
       padding: 1.5% 1%;
     }
+    @include breakpoints.min-xxxl-large {
+      width: 30rem;
+      padding: 1.5% 1%;
+    }
   }
   &__qrImg {
     position: absolute;
@@ -90,9 +101,15 @@
     @include breakpoints.min-large {
       width: 14rem;
     }
+    @include breakpoints.min-xxxl-large {
+      width: 17rem;
+    }
   }
 
   @include breakpoints.min-large {
     height: 18rem;
+  }
+  @include breakpoints.min-xxxl-large {
+    height: 24rem;
   }
 }

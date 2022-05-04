@@ -1,0 +1,106 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: zIndex.$modals;
+}
+
+.modalDialog {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 400ms ease-in;
+  z-index: zIndex.$modals;
+  -moz-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(0.4rem);
+  border: 1px solid rgba(255, 208, 0, 0.521);
+  border-radius: 10px;
+  height: auto;
+  padding: 5px 20px 13px 20px;
+  position: relative;
+  transition: opacity 400ms ease-in;
+  z-index: zIndex.$modals;
+  -moz-transition: opacity 400ms ease-in;
+  -webkit-transition: opacity 400ms ease-in;
+  width: 30%;
+  min-width: 20rem;
+}
+
+.content h2 {
+  color: #d6c8a3;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 4rem 0;
+  text-align: center;
+}
+.content h5 {
+  color: #d6c8a3;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+}
+
+.content hr {
+  background-image: linear-gradient(to left, #a8830a 0%, #cead54 100%);
+  border: none;
+  border-radius: 10%;
+  height: 0.5vh;
+  margin: 0 auto 5% auto;
+  padding: 0;
+  text-align: center;
+  width: 30%;
+}
+
+.content p {
+  color: #d6c8a3;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 165%;
+}
+
+.content button {
+  background-image: linear-gradient(to left, #a8830a 0%, #cead54 100%);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 3%;
+  padding: 2% 10%;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  z-index: zIndex.$modals;
+  text-shadow: 1px 1px 1px #000;
+}

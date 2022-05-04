@@ -1,0 +1,23 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.change {
+  left: 25%;
+  position: absolute;
+  top: 34%;
+  width: 2.5rem;
+  cursor: pointer;
+
+  @include breakpoints.min-large {
+    width: 2rem;
+    top: 32%;
+  }
+  @include breakpoints.min-xxxl-large {
+    width: 2.5rem;
+    top: 34%;
+  }
+}

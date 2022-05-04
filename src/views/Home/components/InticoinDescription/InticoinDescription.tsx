@@ -3,10 +3,10 @@ import { Description } from "./components/Description/Description";
 import { WalletValues } from "./components/WalletValues/WalletValues";
 import { Avatar } from "./components/Avatar/Avatar";
 
-export const InticoinDescription = () => {
+export const InticoinDescription = ({ setPaper }: any) => {
   return (
     <div className={classes.background}>
-      <Description />
+      <Description setPaper={setPaper} />
       <WalletValues />
       <Avatar />
     </div>

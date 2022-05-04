@@ -7,7 +7,11 @@ export const Partners = () => {
     <>
       <section className={classes.partners}>
         <h2>Nuestros colaboradores</h2>
-        <div className={classes.partnersContainer}>
+        <div
+          className={classes.partnersContainer}
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
           <div className={classes.partnersContainer__image}>
             <a href="https://firulaixcoin.finance/" target="_blank">
               <Image

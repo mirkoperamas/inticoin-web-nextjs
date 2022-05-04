@@ -8,10 +8,7 @@
 .aboutUs__description {
   position: relative;
   width: 100%;
-  // display: flex;
-  // top: 0;
-  // padding-top: 7.9%;
-  // background: rgba(255, 255, 0, 0.121);
+
   @include utilities.background-image-params(
     "/img/home/inticoin-description/inti-image.png",
     center,
@@ -23,7 +20,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.626);
+    background: colors.$deg-dark;
 
     @include breakpoints.min-large {
       display: none;
@@ -56,6 +53,7 @@
 
     & h1 {
       font-size: 20px;
+      text-shadow: 1px 1px 1px colors.$dark;
       padding-top: 2rem;
       @include breakpoints.min-x-small {
         font-size: 35px;

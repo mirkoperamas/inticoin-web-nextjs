@@ -19,10 +19,10 @@ export const Toolbar = () => {
               </li>
             </a>
           </Link>
-          <Link href="/swap">
-            <a className={router.pathname == "/swap" ? classes.active : ""}>
+          <Link href="/exchange">
+            <a className={router.pathname == "/exchange" ? classes.active : ""}>
               <li>
-                <p>Swap</p>
+                <p>Exchange</p>
               </li>
             </a>
           </Link>

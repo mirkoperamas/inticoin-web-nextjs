@@ -8,7 +8,7 @@ import { ThirdSlide } from "./components/slides/ThirdSlide/ThirdSlide";
 import { FourthSlide } from "./components/slides/FourthSlide/FourthSlide";
 import { UtilityUse } from "./components/UtilityUse/UtilityUse";
 
-export const Carousel = () => {
+export const Carousel = ({ setPaper }: any) => {
   const slideshow = useRef(null);
 
   const before = () => {
@@ -78,24 +78,24 @@ export const Carousel = () => {
     }
   };
 
-  // useEffect(() => {
-  //   if (
-  //     slideshow.current !== null &&
-  //     slideshow.current !== "" &&
-  //     slideshow.current !== undefined
-  //   ) {
-  //     setInterval(() => {
-  //       after();
-  //     }, 15000);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (
+      slideshow.current !== null &&
+      slideshow.current !== "" &&
+      slideshow.current !== undefined
+    ) {
+      setInterval(() => {
+        after();
+      }, 15000);
+    }
+  }, []);
 
   return (
     <>
       <div className={classes.carousel}>
         <div className={classes.carousel__slideshow} ref={slideshow}>
           <div className={classes.carousel__slideshow__slide}>
-            <FirstSlide />
+            <FirstSlide setPaper={setPaper} />
           </div>
           <div className={classes.carousel__slideshow__slide}>
             <SecondSlide />

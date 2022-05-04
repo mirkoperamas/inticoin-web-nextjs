@@ -1,0 +1,97 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.aboutUs {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  @include utilities.background-image-params(
+    "/img/about-us/background.png",
+    center,
+    no-repeat,
+    cover
+  );
+  overflow: hidden;
+
+  &__blackCap {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: colors.$deg-dark;
+  }
+
+  &__description {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - hvalues.$header-mobile-h);
+    margin-top: hvalues.$header-mobile-h;
+    @include utilities.flexbox-params(flex, center, center);
+    flex-direction: column;
+
+    & h1 {
+      color: colors.$primary;
+      text-shadow: 1px 1px 1px #000;
+      font-size: 30px;
+      margin-top: -15%;
+      padding: 2% 0;
+
+      @include breakpoints.min-medium {
+        font-size: 50px;
+        padding: 4% 0;
+      }
+      @include breakpoints.min-large {
+        width: 100%;
+        font-size: 40px;
+        padding: 2% 10%;
+      }
+      @include breakpoints.min-xxxl-large {
+        font-size: 50px;
+      }
+    }
+
+    &Text {
+      background: colors.$deg-yellow;
+      width: 100%;
+      padding: 2% 4%;
+      @include breakpoints.min-large {
+        padding: 2% 12%;
+      }
+      @include breakpoints.min-xxxl-large {
+        padding: 2% 15%;
+      }
+
+      & p {
+        color: colors.$secondary;
+        font-size: 12px;
+
+        @include breakpoints.min-medium {
+          font-size: 16px;
+        }
+        @include breakpoints.min-large {
+          font-size: 12px;
+        }
+        @include breakpoints.min-xxxl-large {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @include breakpoints.min-large {
+      height: calc(100vh - hvalues.$header-h);
+      margin-top: hvalues.$header-h;
+    }
+
+    @include breakpoints.min-xxxl-large {
+      height: calc(100vh - hvalues.$header-max-h);
+      margin-top: hvalues.$header-max-h;
+    }
+  }
+
+  @include breakpoints.min-large {
+    background-size: 100% 100%;
+  }
+}

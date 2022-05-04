@@ -1,0 +1,31 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.swap {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+
+  &__calc {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+
+    @include breakpoints.min-large {
+      gap: 0.5rem;
+    }
+  }
+
+  &__info {
+    width: 100%;
+  }
+
+  @include breakpoints.min-large {
+    gap: 1rem;
+  }
+}

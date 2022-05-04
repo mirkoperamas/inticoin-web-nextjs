@@ -1,0 +1,62 @@
+@use "/src/styles/base/images";
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/zIndex" as zIndex;
+@use "/src/styles/base/heightValues" as hvalues;
+
+.liquidityButton {
+  @include utilities.flexbox-params(flex, center, center);
+  width: 100%;
+  padding: 0.5rem 0;
+
+  &__design {
+    background-image: url(/img/swap/connect-on.png);
+    background-position: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    width: 14rem;
+    height: 3rem;
+
+    &:hover {
+      background-image: url(/img/swap/connect-off.png);
+    }
+
+    &:active {
+      background-image: url(/img/swap/connect-on.png);
+    }
+
+    & p {
+      color: colors.$brown;
+      font-weight: bold;
+      font-size: 15px;
+
+      @include breakpoints.min-large {
+        font-size: 9px;
+      }
+
+      @include breakpoints.min-xxxl-large {
+        font-size: 14px;
+      }
+    }
+
+    @include breakpoints.min-large {
+      width: 10rem;
+      height: 1.2rem;
+    }
+
+    @include breakpoints.min-xxxl-large {
+      width: 13rem;
+      height: 3rem;
+    }
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+}

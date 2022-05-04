@@ -1,0 +1,36 @@
+.containerList {
+  cursor: pointer;
+  margin: 3% 0;
+  padding: 2% 8%;
+}
+
+.containerList:hover {
+  background: rgba(167, 167, 167, 0.377);
+}
+
+.listContent {
+  display: flex;
+}
+
+.listImg img {
+  width: 100%;
+}
+
+.listText {
+  margin-left: 5%;
+}
+
+.listText p {
+  margin: 0;
+}
+
+.coinImage {
+  // align-items: center;
+  // border-radius: 50%;
+  // display: flex;
+  // justify-content: center;
+  // overflow: hidden;
+  // display: none;
+  position: relative;
+  width: 2rem;
+}

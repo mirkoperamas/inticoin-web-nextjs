@@ -83,7 +83,11 @@ export const Roadmap = () => {
           <section className={classes.carousel}>
             <div className={classes.carousel__slideshow} ref={slideshow}>
               <div className={classes.carousel__slideshow__slide}>
-                <article className={classes.carousel__slideshow__slideCard}>
+                <article
+                  className={classes.carousel__slideshow__slideCard}
+                  data-aos="zoom-in-right"
+                  data-aos-duration="3000"
+                >
                   <div className={classes.carousel__slideshow__slideCard__sign}>
                     <Image
                       src="/img/home/roadmap/sign.png"
@@ -146,7 +150,11 @@ export const Roadmap = () => {
                 </article>
               </div>
               <div className={classes.carousel__slideshow__slide}>
-                <article className={classes.carousel__slideshow__slideCard}>
+                <article
+                  className={classes.carousel__slideshow__slideCard}
+                  data-aos="zoom-in-right"
+                  data-aos-duration="3000"
+                >
                   <div className={classes.carousel__slideshow__slideCard__sign}>
                     <Image
                       src="/img/home/roadmap/sign.png"
@@ -209,7 +217,11 @@ export const Roadmap = () => {
                 </article>
               </div>
               <div className={classes.carousel__slideshow__slide}>
-                <article className={classes.carousel__slideshow__slideCard}>
+                <article
+                  className={classes.carousel__slideshow__slideCard}
+                  data-aos="zoom-in-left"
+                  data-aos-duration="3000"
+                >
                   <div className={classes.carousel__slideshow__slideCard__sign}>
                     <Image
                       src="/img/home/roadmap/sign.png"
@@ -272,7 +284,11 @@ export const Roadmap = () => {
                 </article>
               </div>
               <div className={classes.carousel__slideshow__slide}>
-                <article className={classes.carousel__slideshow__slideCard}>
+                <article
+                  className={classes.carousel__slideshow__slideCard}
+                  data-aos="zoom-in-left"
+                  data-aos-duration="3000"
+                >
                   <div className={classes.carousel__slideshow__slideCard__sign}>
                     <Image
                       src="/img/home/roadmap/sign.png"

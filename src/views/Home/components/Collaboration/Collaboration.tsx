@@ -24,7 +24,11 @@ export const Collaboration = () => {
             height={74}
           />
         </div>
-        <div className={classes.collaboration__text}>
+        <div
+          className={classes.collaboration__text}
+          data-aos="fade-down"
+          data-aos-duration="2500"
+        >
           <h3>Puedes colaborar con nuestro proyecto despositando en:</h3>
           <div>
             <div>

@@ -1,0 +1,74 @@
+import SWAPMAINET from "./abi/swap.json";
+import SWAPTESNETABI from "./abi/swapTesnet.json";
+import SWAPROUTER_MAINET from "./abi/swapRouterMainnet.json";
+import SWAPROUTER_TESNETABI from "./abi/swapRouterTesnet.json";
+import {
+  MOON_CONTRACT,
+  MOON_CONTRACT_SPECIES,
+  MOON_CONTRACT_WAR,
+  TESNET_CONTRACT,
+  TESNET_CONTRACT_SPECIES,
+  TESNET_CONTRACT_WAR,
+} from "./constants/contracts";
+import {
+  API_MAINET,
+  API_TESNET,
+  IPFS_MAINET,
+  IPFS_TESNET,
+  URL_MAINET,
+} from "./constants/endpoints";
+import { METHODS_MAINET, METHODS_TESNET } from "./constants/methodsSwap";
+import { PAIRS_MAINNET, PAIRS_TESTNET } from "./constants/pair";
+import { TOKEN_MAINNET, TOKEN_TESTNET } from "./constants/tokens";
+import {
+  CHAIN_ID_MAINNET,
+  CHAIN_ID_TESTNET,
+  WEB3_NETWORK_MAINNET,
+  WEB3_NETWORK_TESTNET,
+} from "./constants/networks";
+
+/**
+ * @ENTORNO
+ */
+const PRODUCTION = false;
+
+/**
+ * @NETWORKS
+ * @BLOCKCHAIN
+ */
+export const CHAIN_ID = PRODUCTION ? CHAIN_ID_MAINNET : CHAIN_ID_TESTNET;
+
+export const NETWORK_MAINNET = PRODUCTION ? "mainnet" : "testnet";
+
+export const WEB3_NETWORK = PRODUCTION
+  ? WEB3_NETWORK_MAINNET
+  : WEB3_NETWORK_TESTNET;
+
+/**
+ * @CONTRACTS
+ * @ABI
+ * @TOKENS
+ */
+
+export const CONTRACTS = PRODUCTION ? MOON_CONTRACT : TESNET_CONTRACT;
+export const CONTRACTS_WAR = PRODUCTION
+  ? MOON_CONTRACT_WAR
+  : TESNET_CONTRACT_WAR;
+export const CONTRACTS_SPECIES = PRODUCTION
+  ? MOON_CONTRACT_SPECIES
+  : TESNET_CONTRACT_SPECIES;
+
+export const ROUTER_METHODS = PRODUCTION ? METHODS_MAINET : METHODS_TESNET;
+export const SWAPABI = PRODUCTION ? SWAPMAINET : SWAPTESNETABI;
+export const SWAPROUTERABI = PRODUCTION
+  ? SWAPROUTER_MAINET
+  : SWAPROUTER_TESNETABI;
+export const TOKENS = PRODUCTION ? TOKEN_MAINNET : TOKEN_TESTNET;
+export const PAIRS: any = PRODUCTION ? PAIRS_MAINNET : PAIRS_TESTNET;
+
+/**
+ * @ENDPOINTS
+ */
+export const URL = PRODUCTION ? URL_MAINET : URL_MAINET;
+export const API = PRODUCTION ? API_MAINET : API_MAINET;
+export const IPFS = PRODUCTION ? IPFS_MAINET : IPFS_TESNET;

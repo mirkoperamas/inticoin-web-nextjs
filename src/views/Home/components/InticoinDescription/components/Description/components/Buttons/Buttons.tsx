@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Informative } from "../../../../../../../../components/modals/Informative/Informative";
 import classes from "./buttons.module.scss";
 
-export const Buttons = () => {
+export const Buttons = ({ setPaper }: any) => {
   const [contract, setContract] = useState(false);
-  const [paper, setPaper] = useState(false);
 
   const contractCopy = () => {
     navigator.clipboard.writeText("123456");
@@ -35,14 +34,6 @@ export const Buttons = () => {
               Copiar
             </button>
           </div>
-        </Informative>
-      )}
-
-      {paper && (
-        <Informative handleClose={() => setPaper(false)}>
-          <span>
-            <h2>Proximamente...</h2>
-          </span>
         </Informative>
       )}
     </>

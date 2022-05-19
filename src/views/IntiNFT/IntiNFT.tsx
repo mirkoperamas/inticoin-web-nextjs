@@ -11,6 +11,7 @@ export const IntiNFT = () => {
   return (
     <>
       <main className={classes.intiNft}>
+        <div className={classes.intiNft__blackCap}></div>
         <div className={classes.intiNftContent}>
           <div className={classes.intiNftContent__inicio}>
             <h2>Intis Nft's</h2>

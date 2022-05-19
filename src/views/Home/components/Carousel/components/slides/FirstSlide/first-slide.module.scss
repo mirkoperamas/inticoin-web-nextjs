@@ -39,7 +39,7 @@
     @include breakpoints.min-large {
       padding-top: 0;
     }
-    @include breakpoints.min-xxxl-large {
+    @include breakpoints.min-xxl-large {
       max-width: 15rem;
     }
   }
@@ -59,7 +59,7 @@
         @include breakpoints.min-large {
           text-align: start;
         }
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 50px;
         }
       }
@@ -70,7 +70,7 @@
         @include breakpoints.min-large {
           text-align: start;
         }
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 35px;
         }
       }

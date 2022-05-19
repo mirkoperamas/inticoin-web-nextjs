@@ -48,12 +48,12 @@
     font-size: 10px;
     font-weight: bold;
 
-    @include breakpoints.min-xxxl-large {
+    @include breakpoints.min-xxl-large {
       font-size: 13px;
     }
   }
 
-  @include breakpoints.min-xxxl-large {
+  @include breakpoints.min-xxl-large {
     width: 28rem;
     margin: 2.4rem auto 0 auto;
   }

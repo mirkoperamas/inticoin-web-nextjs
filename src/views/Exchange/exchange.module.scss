@@ -33,7 +33,7 @@
     height: calc(40rem - hvalues.$header-mobile-h);
     // background: colors.$deg-brown-dark;
     background: #e8ddab75;
-    backdrop-filter: blur(0.3rem);
+    // backdrop-filter: blur(0.3rem);
     margin: 10rem 1rem;
     border-radius: 2rem;
     padding: 2% 5%;
@@ -74,72 +74,75 @@
       height: calc(50rem - hvalues.$header-mobile-h);
     }
   }
+  @include breakpoints.min-large {
+    display: none;
+  }
 }
 
 .exchange {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  height: calc(100vh - hvalues.$header-h);
-  margin-top: hvalues.$header-h;
+  display: none;
 
-  & > div {
-    // border: 1px solid red;
-  }
+  @include breakpoints.min-large {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    height: calc(100vh - hvalues.$header-h);
+    margin-top: hvalues.$header-h;
 
-  &__frame {
-    position: relative;
-    &Bg {
-      position: absolute;
-      width: 85%;
-      height: 100%;
-      top: -5%;
-      left: 10%;
-
-      @include breakpoints.min-xxxl-large {
-        top: 6%;
-      }
-    }
-
-    &Main {
-      position: absolute;
-      width: 60%;
-      top: 0;
-      left: 22%;
-
-      &__title {
-        padding: 2% 0 0 5%;
-        & p {
-          font-size: 10px;
-
-          @include breakpoints.min-xxxl-large {
-            font-size: 15px;
-          }
-        }
-
-        & h2 {
-          font-size: 25px;
-
-          @include breakpoints.min-xxxl-large {
-            font-size: 30px;
-          }
-        }
-      }
-
-      @include breakpoints.min-xxxl-large {
-        top: 14%;
-      }
-    }
-  }
-
-  &__image {
-    width: 100%;
-
-    & div {
-      max-width: 20rem;
+    &__frame {
       position: relative;
+      &Bg {
+        position: absolute;
+        width: 85%;
+        height: 100%;
+        top: -5%;
+        left: 10%;
 
-      @include breakpoints.min-xxxl-large {
-        max-width: 32rem;
+        @include breakpoints.min-xxl-large {
+          top: 6%;
+        }
+      }
+
+      &Main {
+        position: absolute;
+        width: 60%;
+        top: 0;
+        left: 22%;
+
+        &__title {
+          padding: 2% 0 0 5%;
+          & p {
+            font-size: 10px;
+
+            @include breakpoints.min-xxl-large {
+              font-size: 15px;
+            }
+          }
+
+          & h2 {
+            font-size: 25px;
+
+            @include breakpoints.min-xxl-large {
+              font-size: 30px;
+            }
+          }
+        }
+
+        @include breakpoints.min-xxl-large {
+          top: 14%;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+
+      & div {
+        max-width: 20rem;
+        position: relative;
+
+        @include breakpoints.min-xxl-large {
+          max-width: 32rem;
+        }
       }
     }
   }

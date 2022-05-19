@@ -78,17 +78,17 @@ export const Carousel = ({ setPaper }: any) => {
     }
   };
 
-  useEffect(() => {
-    if (
-      slideshow.current !== null &&
-      slideshow.current !== "" &&
-      slideshow.current !== undefined
-    ) {
-      setInterval(() => {
-        after();
-      }, 15000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (
+  //     slideshow.current !== null &&
+  //     slideshow.current !== "" &&
+  //     slideshow.current !== undefined
+  //   ) {
+  //     setInterval(() => {
+  //       after();
+  //     }, 15000);
+  //   }
+  // }, []);
 
   return (
     <>

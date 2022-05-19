@@ -54,7 +54,7 @@ export const Exchange = () => {
   return (
     <>
       <main className={classes.swap}>
-        {/* <section className={classes.exchangeMobile}>
+        <section className={classes.exchangeMobile}>
           <div className={classes.exchangeMobile__frame}>
             <div className={classes.exchangeMobile__frameTitle}>
               <p>Calcula tus cryptomonedas</p>
@@ -80,7 +80,7 @@ export const Exchange = () => {
               )}
             </div>
           </div>
-        </section> */}
+        </section>
 
         <section className={classes.exchange}>
           <div className={classes.exchange__frame}>

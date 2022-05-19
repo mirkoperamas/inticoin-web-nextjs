@@ -48,7 +48,7 @@
         @include breakpoints.min-large {
           text-align: start;
         }
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 50px;
           text-align: end;
         }
@@ -73,7 +73,7 @@
     @include breakpoints.min-medium {
       max-width: 18rem;
     }
-    @include breakpoints.min-xxxl-large {
+    @include breakpoints.min-xxl-large {
       max-width: 23rem;
     }
   }

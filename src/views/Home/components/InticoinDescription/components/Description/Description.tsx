@@ -10,7 +10,7 @@ export const Description = ({ setPaper }: any) => {
       <div className={classes.aboutUs__descriptionImage}>
         <div className={classes.aboutUs__descriptionImage__content}>
           <Image
-            src="/img/home/inticoin-description/inti-image.png"
+            src="/img/home/inticoin-description/logo-bg.png"
             layout="responsive"
             width={37}
             height={20}

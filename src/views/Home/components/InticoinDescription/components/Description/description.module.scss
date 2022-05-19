@@ -36,8 +36,8 @@
         position: relative;
         width: 100%;
         max-width: 25rem;
-        @include breakpoints.min-xxxl-large {
-          max-width: 35rem;
+        @include breakpoints.min-xxl-large {
+          max-width: 40rem;
         }
       }
     }
@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: colors.$primary;
 
     & h1 {
       font-size: 20px;
@@ -87,7 +87,7 @@
         @include breakpoints.min-medium {
           font-size: 12px;
         }
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 15px;
         }
       }
@@ -108,7 +108,7 @@
   @include breakpoints.min-large {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    background: colors.$deg-brown-dark;
+    background: none;
     padding-top: 1rem;
   }
 }

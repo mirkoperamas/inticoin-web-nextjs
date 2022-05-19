@@ -29,7 +29,7 @@
         font-size: 11px;
       }
 
-      @include breakpoints.min-xxxl-large {
+      @include breakpoints.min-xxl-large {
         font-size: 16px;
       }
     }
@@ -86,7 +86,7 @@
       height: 1.4rem;
     }
 
-    @include breakpoints.min-xxxl-large {
+    @include breakpoints.min-xxl-large {
       width: 1.7rem;
       height: 1.7rem;
     }

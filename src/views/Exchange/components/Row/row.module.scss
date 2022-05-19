@@ -40,7 +40,7 @@
           margin-bottom: -35%;
         }
 
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 18px;
           margin-bottom: -20%;
         }
@@ -53,7 +53,7 @@
           font-size: 9px;
         }
 
-        @include breakpoints.min-xxxl-large {
+        @include breakpoints.min-xxl-large {
           font-size: 11px;
         }
       }
@@ -88,7 +88,7 @@
         font-size: 13px;
         padding: 0.3rem 0.5rem;
       }
-      @include breakpoints.min-large {
+      @include breakpoints.min-xxl-large {
         font-size: 16px;
       }
     }
@@ -98,7 +98,7 @@
     padding: 0.2rem 0.8rem;
     width: 95%;
   }
-  @include breakpoints.min-large {
+  @include breakpoints.min-xxl-large {
     padding: 0.5rem 0.8rem;
   }
 }

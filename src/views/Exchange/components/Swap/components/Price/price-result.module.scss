@@ -32,10 +32,10 @@
       font-weight: bold;
       font-size: 12px;
 
-      @include breakpoints.min-xxxl-large {
+      @include breakpoints.min-large {
         font-size: 9px;
       }
-      @include breakpoints.min-xxxl-large {
+      @include breakpoints.min-xxl-large {
         font-size: 12px;
       }
     }
@@ -48,7 +48,7 @@
       @include breakpoints.min-large {
         font-size: 9px;
       }
-      @include breakpoints.min-xxxl-large {
+      @include breakpoints.min-xxl-large {
         font-size: 12px;
       }
     }

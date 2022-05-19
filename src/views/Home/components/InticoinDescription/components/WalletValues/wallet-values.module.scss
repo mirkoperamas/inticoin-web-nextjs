@@ -36,7 +36,7 @@
           transform: rotate(90deg);
           font-size: 8px;
           margin-right: 0.1rem;
-          @include breakpoints.min-xxxl-large {
+          @include breakpoints.min-xxl-large {
             font-size: 10px;
           }
         }
@@ -47,7 +47,7 @@
           margin-left: 0.5rem;
           margin-right: 1rem;
           line-height: 15px;
-          @include breakpoints.min-xxxl-large {
+          @include breakpoints.min-xxl-large {
             font-size: 17px;
           }
         }
@@ -58,7 +58,7 @@
 
         &Image {
           min-width: 6rem;
-          @include breakpoints.min-xxxl-large {
+          @include breakpoints.min-xxl-large {
             min-width: 8rem;
           }
         }
@@ -78,7 +78,7 @@
       min-width: 10rem;
       margin: -5.2rem 0 0 -4rem;
     }
-    @include breakpoints.min-xxxl-large {
+    @include breakpoints.min-xxl-large {
       min-width: 13rem;
       margin: -6.5rem 0 0 -4rem;
     }
@@ -91,7 +91,7 @@
     max-width: 40rem;
     bottom: 15%;
   }
-  @include breakpoints.min-xxxl-large {
+  @include breakpoints.min-xxl-large {
     max-width: 50rem;
     bottom: 20%;
   }

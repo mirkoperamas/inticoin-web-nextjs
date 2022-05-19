@@ -3,7 +3,6 @@ import { Informative } from "../../components/modals/Informative/Informative";
 import { Carousel } from "./components/Carousel/Carousel";
 import { Collaboration } from "./components/Collaboration/Collaboration";
 import { InticoinDescription } from "./components/InticoinDescription/InticoinDescription";
-import { Partners } from "./components/Partners/Partners";
 import { Roadmap } from "./components/Roadmap/Roadmap";
 import classes from "./home.module.scss";
 import AOS from "aos";
@@ -22,7 +21,6 @@ export const HomeView = () => {
         <Carousel setPaper={setPaper} />
         <InticoinDescription setPaper={setPaper} />
         <Roadmap />
-        <Partners />
         <Collaboration />
       </div>
       {paper && (

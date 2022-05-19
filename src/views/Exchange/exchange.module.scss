@@ -5,6 +5,9 @@
 @use "/src/styles/base/zIndex" as zIndex;
 @use "/src/styles/base/heightValues" as hvalues;
 
+$swap-info-h: 7.5rem;
+$swap-info-max-h: 10rem;
+
 .swap {
   width: 100%;
   height: 100vh;
@@ -18,6 +21,10 @@
 
   @include breakpoints.min-large {
     background-size: 100% 100%;
+    height: calc(100vh - $swap-info-h);
+  }
+  @include breakpoints.min-xxl-large {
+    height: calc(100vh - $swap-info-max-h);
   }
 }
 
@@ -98,7 +105,7 @@
         left: 10%;
 
         @include breakpoints.min-xxl-large {
-          top: 6%;
+          top: -2%;
         }
       }
 
@@ -128,22 +135,94 @@
         }
 
         @include breakpoints.min-xxl-large {
-          top: 14%;
+          top: 8%;
         }
       }
     }
 
     &__image {
       width: 100%;
+      height: 100%;
+      position: relative;
 
       & div {
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
         max-width: 20rem;
-        position: relative;
+        height: 100%;
+        margin-bottom: -5rem;
 
         @include breakpoints.min-xxl-large {
           max-width: 32rem;
         }
       }
     }
+  }
+}
+
+.swapInfo {
+  display: none;
+
+  @include breakpoints.min-large {
+    display: block;
+    @include utilities.background-image-params(
+      "/img/swap/swap-info.png",
+      center,
+      no-repeat,
+      100% 100%
+    );
+    width: 100%;
+    height: $swap-info-h;
+    color: colors.$white;
+
+    & > div {
+      width: 80%;
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    & h2 {
+      font-size: 20px;
+      margin-top: 1.5%;
+    }
+
+    &__columns {
+      display: flex;
+      margin-top: 2%;
+
+      & div {
+        width: 50%;
+      }
+
+      & button {
+        outline: none;
+        border: 0;
+        background: linear-gradient(
+          to right,
+          colors.$primary 0%,
+          colors.$secondary 25%,
+          colors.$primary 50%,
+          colors.$secondary 75%,
+          colors.$primary 100%
+        );
+        font-size: 14px;
+        font-weight: bold;
+        padding: 0.4rem 1rem;
+        text-transform: uppercase;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      & p {
+        margin: 1.5% 0;
+      }
+    }
+  }
+
+  @include breakpoints.min-xxl-large {
+    height: $swap-info-max-h;
   }
 }

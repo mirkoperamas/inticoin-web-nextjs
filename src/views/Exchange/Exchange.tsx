@@ -22,6 +22,7 @@ export const Exchange = () => {
   );
 
   const [openConfModal, setOpenConfModal] = useState(false);
+  const [paper, setPaper] = useState(false);
 
   const { reserves, handleReserves } = useReserves();
   useEffect(() => {
@@ -135,6 +136,27 @@ export const Exchange = () => {
         </section>
       </main>
 
+      <div className={classes.swapInfo}>
+        <div>
+          <h2>
+            Damos inicio a nuestro proyecto con un inticoin token erc-20 alojada
+            en la blockchain de moombeam (GLMR)
+          </h2>
+          <div className={classes.swapInfo__columns}>
+            <div>
+              <button onClick={() => setPaper(true)}>Copiar Enlace</button>
+              <p>Comprar ahora en Glimmer</p>
+              <p>Agregar liquidez en Glimmer</p>
+            </div>
+            <div>
+              <button onClick={() => setPaper(true)}>Ver grafico</button>
+              <p>Compruebe su glimmer</p>
+              <p>Ver soporte LP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {openConfModal && (
         <Informative handleClose={() => setOpenConfModal(false)}>
           <h5>Slipage</h5>
@@ -157,6 +179,13 @@ export const Exchange = () => {
               Cerrar
             </button>
           </div>
+        </Informative>
+      )}
+      {paper && (
+        <Informative handleClose={() => setPaper(false)}>
+          <span>
+            <h2>Proximamente...</h2>
+          </span>
         </Informative>
       )}
     </>

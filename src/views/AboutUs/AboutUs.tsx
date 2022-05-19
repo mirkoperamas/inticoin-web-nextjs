@@ -17,8 +17,8 @@ export const AboutUs = () => {
               uso de contratos inteligentes.
               <br />
               Como medio de recaudacion de fondos, implementamos un contrato
-              inteligente en la Binance Smart Chain (BSC) para ser participes en
-              plataformas de Finanzas descentralizadas (DeFi).
+              inteligente en Glimmer (GLMR) para ser participes en plataformas
+              de Finanzas descentralizadas (DeFi).
               <br />
               Gracias a nuestra comunidad, estamos construyendo un sistema
               financiero descentralizado más inclusivo donde más personas,

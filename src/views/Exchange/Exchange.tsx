@@ -85,14 +85,6 @@ export const Exchange = () => {
 
         <section className={classes.exchange}>
           <div className={classes.exchange__frame}>
-            <div className={classes.exchange__frameBg}>
-              <Image
-                src="/img/swap/swap-frame.png"
-                width={80}
-                height={52}
-                layout="responsive"
-              />
-            </div>
             <div className={classes.exchange__frameMain}>
               <div className={classes.exchange__frameMain__title}>
                 <p>Calcula tus cryptomonedas</p>

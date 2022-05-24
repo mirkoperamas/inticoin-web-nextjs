@@ -7,8 +7,8 @@
 
 .collaboration {
   @include breakpoints.min-xxl-large {
-    height: calc(100vh - hvalues.$footer-h);
+    height: calc(100vh - hvalues.$header-max-h - hvalues.$footer-h);
     display: grid;
-    grid-template-rows: 0.8fr 1.2fr;
+    grid-template-rows: 0.7fr 1.2fr;
   }
 }

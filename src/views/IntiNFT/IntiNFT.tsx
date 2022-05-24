@@ -10,8 +10,8 @@ export const IntiNFT = () => {
 
   return (
     <>
+      <div className={classes.intiNft__blackCap}></div>
       <main className={classes.intiNft}>
-        <div className={classes.intiNft__blackCap}></div>
         <div className={classes.intiNftContent}>
           <div className={classes.intiNftContent__inicio}>
             <h2>Intis Nft's</h2>
@@ -38,12 +38,20 @@ export const IntiNFT = () => {
           <div className={classes.intiNftContent__graphic}>
             <div className={classes.intiNftContent__graphicFrame}>
               <Image
-                src="/img/inti-nft/image-inti.png"
+                src="/img/inti-nft/nft-gif.gif"
                 alt="image inti"
                 layout="responsive"
-                width={50}
+                width={45}
                 height={50}
               />
+              {/* <video
+                src="/img/inti-nft/nft-gif.mp4"
+                width="100%"
+                height="100%"
+                autoPlay={true}
+                loop
+                // controls
+              ></video> */}
             </div>
           </div>
 

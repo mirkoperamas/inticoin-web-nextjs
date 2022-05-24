@@ -28,5 +28,11 @@
   & h1 {
     position: relative;
     font-size: 40px;
+    max-width: 30rem;
+    margin-top: -8rem;
+
+    @include breakpoints.min-xxl-large {
+      max-width: 40rem;
+    }
   }
 }

@@ -1,7 +1,9 @@
 import classes from "./footer.module.scss";
 import Image from "next/image";
+import { useTranslate } from "../../hooks/useTranslate";
 
 export const Footer = () => {
+  const { t } = useTranslate();
   return (
     <>
       <section className={classes.footer}>
@@ -15,14 +17,11 @@ export const Footer = () => {
             />
           </div>
           <div className={classes.footer__text}>
-            <p>
-              Inticoin fue diseñado para potenciar el comercio en el Peru,
-              mediante la creacion de una criptomoneda con migracion a EVM.
-            </p>
+            <p>{t.footer.description}</p>
           </div>
           <div className={classes.footer__networks}>
-            <h4>¡Unete a nuestra comunidad!</h4>
-            <p>Email: inticoin@qolkrex.foundation</p>
+            <h4>{t.footer.titleJoin}</h4>
+            <p>{t.footer.email}</p>
             <div className={classes.footer__networksIcons}>
               <a
                 href="https://www.facebook.com/inticoinofficial"
@@ -122,10 +121,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className={classes.footer__copyright}>
-          <p>
-            &copy; Copyright | Qolkrex Foundation 2021 | Todos los derechos
-            reservados
-          </p>
+          <p>{t.footer.copyrigth}</p>
         </div>
       </section>
     </>

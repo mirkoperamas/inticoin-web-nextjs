@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./qr-section.module.scss";
 import Image from "next/image";
+import { useTranslate } from "../../../../../../hooks/useTranslate";
 
 export const QrSection = () => {
+  const { t } = useTranslate();
   return (
     <>
       <section className={classes.qrSection}>
@@ -29,23 +31,23 @@ export const QrSection = () => {
           data-aos="fade-down"
           data-aos-duration="2500"
         >
-          <h3>Puedes colaborar con nuestro proyecto despositando en:</h3>
+          <h3>{t.collaboration.qrSection.subTitle}</h3>
           <div>
             <div>
               <span>
-                <strong>Dirección de recepción:</strong>
+                <strong>{t.collaboration.qrSection.direction}</strong>
               </span>
               <span>0x3B60DA2F434b6BD6a3B31D6425C0b2A8395c8850</span>
             </div>
             <div>
               <span>
-                <strong>Token aceptado:</strong>
+                <strong>{t.collaboration.qrSection.paragraphFirst}</strong>
               </span>
-              <span>Cualquier BEP20 (BSC)</span>
+              <span>{t.collaboration.qrSection.paragraphFirstResp}</span>
             </div>
             <div>
               <span>
-                <strong>Token preferido:</strong>
+                <strong>{t.collaboration.qrSection.paragraphSecond}</strong>
               </span>
               <span>INTI</span>
             </div>

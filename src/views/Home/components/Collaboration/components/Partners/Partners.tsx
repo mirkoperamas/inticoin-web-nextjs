@@ -1,12 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import { useTranslate } from "../../../../../../hooks/useTranslate";
 import classes from "./partners.module.scss";
 
 export const Partners = () => {
+  const { t } = useTranslate();
   return (
     <>
       <section className={classes.partners}>
-        <h2>Nuestros colaboradores</h2>
+        <h2>{t.collaboration.partners.title}</h2>
         <div
           className={classes.partnersContainer}
           data-aos="zoom-in"

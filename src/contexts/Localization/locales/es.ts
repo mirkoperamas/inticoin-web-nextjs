@@ -24,5 +24,42 @@ export default {
         "Establecemos un entorno empresarial distribuido de confianza con informacion transparente, colaboracion eficiente",
       intichainUrl: "Ir a INTICHAIN web...",
     },
+    thirdSlide: {
+      title: "Muy pronto estaremos en la red de ",
+      subtitle: "Parachain de: ",
+    },
+    fourthSlide: {
+      title:
+        "Inticoin utilizara UTXO seguridad mientras habilita multiples maquinas virtuales incluidas EVM y ARM VM",
+    },
+  },
+  footer: {
+    description:
+      "Inticoin fue diseñado para potenciar el comercio en el Perú, mediante la creación de una criptomoneda con migración a EVM.",
+    titleJoin: "¡Únete a nuestra comunidad!",
+    email: "Email: inticoin@qolkrex.foundation",
+    copyrigth:
+      "© Copyright | Qolkrex Foundation 2021 | Todos los derechos reservados",
+  },
+  inticoinDescription: {
+    descriptions: {
+      title: "¿Que es Inticoin?",
+      paragraph:
+        "Inticoin es un proyecto en desarrollo que utilizara la seguridad de UTXO al tiempo que habilita multiples maquinas virtuales, incluidas EVM y ARM VM. esta basado en PoS y cuenta con un Protocolo de Gobernanza Descentralizada (DGP) que permite modificar configuraciones especificas de blockchain mediante el uso de contratos inteligentes. Como medio de recaudacion de fondos, implementamos un contrato inteligente en la Binance Smart Chain (BSC) para ser participes en plataformas de Finanzas descentralizadas (DeFi).",
+      buttonCopy: "Copiar contrato",
+    },
+  },
+
+  collaboration: {
+    partners: {
+      title: "Nuestros colaboradores",
+    },
+    qrSection: {
+      subTitle: "Puedes colaborar con nuestro proyecto despositando en: ",
+      direction: "Dirección de recepción: ",
+      paragraphFirst: "Token aceptado: ",
+      paragraphFirstResp: "Cualquier BEP20 (BSC)",
+      paragraphSecond: "Token preferido:",
+    },
   },
 };

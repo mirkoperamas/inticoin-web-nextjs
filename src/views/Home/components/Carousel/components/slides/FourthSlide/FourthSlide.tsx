@@ -1,17 +1,16 @@
 import Image from "next/image";
+import { useTranslate } from "../../../../../../../hooks/useTranslate";
 import classes from "./fourth-slide.module.scss";
 
 export const FourthSlide = () => {
+  const { t } = useTranslate();
   return (
     <>
       <div className={classes.background}></div>
       <section className={classes.secondSlide}>
         <div className={classes.secondSlide__textContent}>
           <div className={classes.secondSlide__textContent__text}>
-            <h1>
-              Inticoin utilizara UTXO seguridad mientras habilita multiples
-              maquinas virtuales incluidas EVM y ARM VM
-            </h1>
+            <h1>{t.carousel.fourthSlide.title}</h1>
           </div>
         </div>
         <div className={classes.secondSlide__image}>

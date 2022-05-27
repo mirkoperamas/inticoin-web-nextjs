@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Informative } from "../../../../../../../../components/modals/Informative/Informative";
+import { useTranslate } from "../../../../../../../../hooks/useTranslate";
 import classes from "./buttons.module.scss";
 
 export const Buttons = ({ setPaper }: any) => {
+  const { t } = useTranslate();
   const [contract, setContract] = useState(false);
 
   const contractCopy = () => {
@@ -13,7 +15,7 @@ export const Buttons = ({ setPaper }: any) => {
   return (
     <>
       <button className={classes.button} onClick={() => setPaper(true)}>
-        Copiar Contrato
+        {t.inticoinDescription.descriptions.buttonCopy}
       </button>
       <button className={classes.button} onClick={() => setPaper(true)}>
         Inti Papper

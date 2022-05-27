@@ -1,20 +1,20 @@
 import Image from "next/image";
+import { useTranslate } from "../../../../../../../hooks/useTranslate";
 import classes from "./second-slide.module.scss";
 
 export const SecondSlide = () => {
+  const { t } = useTranslate();
+
   return (
     <>
       <div className={classes.background}></div>
       <section className={classes.secondSlide}>
         <div className={classes.secondSlide__textContent}>
           <div className={classes.secondSlide__textContent__text}>
-            <h2>
-              Establecemos un entorno empresarial distribuido de confianza con
-              informacion transparente, colaboracion eficiente
-            </h2>
+            <h2>{t.carousel.secondSlide.subtitle}</h2>
             <h1>
               <a href="https://intichain.io/" target="_blank">
-                Ir a INTICHAIN web...
+                {t.carousel.secondSlide.intichainUrl}
               </a>
             </h1>
           </div>

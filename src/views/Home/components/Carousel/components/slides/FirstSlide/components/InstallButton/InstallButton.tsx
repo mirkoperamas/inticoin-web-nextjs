@@ -1,23 +1,16 @@
 import React from "react";
+import { useTranslate } from "../../../../../../../../../hooks/useTranslate";
 import classes from "./install-button.module.scss";
-import { useState } from "react";
-import { Informative } from "../../../../../../../../../components/modals/Informative/Informative";
 
 export const InstallButton = ({ setPaper }: any) => {
-  // const [paper, setPaper] = useState(false);
-
+  const { t } = useTranslate();
   return (
     <>
       <a onClick={() => setPaper(true)}>
-        <button className={classes.button}>Instala tu billetera virtual</button>
+        <button className={classes.button}>
+          {t.carousel.firstSlide.button}
+        </button>
       </a>
-      {/* {paper && (
-        <Informative handleClose={() => setPaper(false)}>
-          <span>
-            <h2>Proximamente...</h2>
-          </span>
-        </Informative>
-      )} */}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./toolbar.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +7,19 @@ import { Informative } from "../../../modals/Informative/Informative";
 export const Toolbar = () => {
   const router = useRouter();
   const [paper, setPaper] = useState(false);
+  const [lang, setLang] = useState("");
+
+  const handleLang = () => {
+    if (router.locale === "en") {
+      setLang("English");
+    } else if (router.locale === "es") {
+      setLang("Español");
+    }
+  };
+
+  useEffect(() => {
+    handleLang();
+  }, [lang, handleLang]);
 
   return (
     <>
@@ -42,9 +55,36 @@ export const Toolbar = () => {
           </Link>
           <a onClick={() => setPaper(true)}>
             <li>
-              <p>Inti</p>
+              <p>Inti Wiki</p>
             </li>
           </a>
+          <a
+            onClick={handleLang}
+            className={`${classes.active} ${classes.langStyle}`}
+          >
+            <li>
+              <p>{lang}</p>
+            </li>
+          </a>
+
+          <Link href={router.asPath} locale="es">
+            <li>
+              <p>Español</p>
+            </li>
+          </Link>
+          <Link href={router.asPath} locale="en">
+            <li>
+              <p>English</p>
+            </li>
+          </Link>
+
+          {/* <div className={classes.langs}>
+            {router?.locales?.map((loc: any) => (
+              <Link href={router.asPath} locale={loc} key={loc}>
+                {loc}
+              </Link>
+            ))}
+          </div> */}
         </ul>
       </div>
 
@@ -58,3 +98,6 @@ export const Toolbar = () => {
     </>
   );
 };
+function e(e: any) {
+  throw new Error("Function not implemented.");
+}

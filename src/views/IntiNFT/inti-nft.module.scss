@@ -40,7 +40,7 @@
       width: 100%;
       color: colors.$white;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 4rem;
       padding: 2% 5%;
 
       & h2 {
@@ -109,7 +109,7 @@
       &Frame {
         position: relative;
         width: 100%;
-        max-width: 20rem;
+        max-width: 40rem;
         height: auto;
 
         @include utilities.background-image-params(
@@ -118,7 +118,7 @@
           no-repeat,
           contain
         );
-        padding: 8% 10%;
+        padding: 25%;
 
         & img {
           width: 100%;
@@ -126,16 +126,13 @@
         }
 
         @include breakpoints.min-large {
-          max-width: 30rem;
+          max-width: 20rem;
+          padding: 15%;
         }
-      }
-      @include breakpoints.min-large {
-        // max-width: 22rem;
-        // margin: 5% auto 0 auto;
-        // padding: 0;
-      }
-      @include breakpoints.min-xxl-large {
-        // max-width: 32rem;
+        @include breakpoints.min-xxl-large {
+          max-width: 35rem;
+          padding: 17%;
+        }
       }
     }
 

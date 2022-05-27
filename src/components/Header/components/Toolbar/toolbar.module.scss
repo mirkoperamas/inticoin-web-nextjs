@@ -37,7 +37,7 @@
     padding-left: 0;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2%;
   }
 
@@ -61,4 +61,14 @@
 
 .active {
   background: colors.$deg-yellow;
+}
+
+.langs {
+  transform: skewX(-20deg);
+  & a {
+    color: colors.$secondary;
+    margin-right: 5%;
+    text-transform: uppercase;
+    padding: 0 5%;
+  }
 }

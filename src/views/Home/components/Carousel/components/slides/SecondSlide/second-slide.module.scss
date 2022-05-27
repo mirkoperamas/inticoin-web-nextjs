@@ -41,9 +41,23 @@
       text-align: center;
       color: colors.$white;
       text-shadow: 1px 1px 1px colors.$dark;
+
       & h1 {
         font-size: 25px;
         margin-top: 2rem;
+        animation: url 4s ease infinite;
+
+        @keyframes url {
+          0% {
+            transform: scale(1.05);
+          }
+          50% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.05);
+          }
+        }
 
         @include breakpoints.min-large {
           text-align: start;
@@ -66,7 +80,7 @@
       }
       & a {
         text-decoration: none;
-        color: colors.$white;
+        color: colors.$secondary;
       }
     }
 

@@ -1,21 +1,18 @@
 import React from "react";
 import classes from "./utility-use.module.scss";
 import Image from "next/image";
+import { useTranslate } from "../../../../../../hooks/useTranslate";
 
 export const UtilityUse = () => {
+  const { t } = useTranslate();
+
   return (
     <div className={classes.utilityUse}>
       <div className={classes.utilityUse__container}>
         <div className={classes.utilityUse__containerDescription}>
-          <h4>UTILITY</h4>
-          <h2>USA TU INTI</h2>
-          <p>
-            IntiCoin, nacido el 01 de junio del 2021, será una red blockchain
-            descentralizada para admitir contratos inteligentes de alto
-            rendimiento. Estamos desarrollando un futuro que permitirá a los
-            desarrolladores implementar sus propias aplicaciones
-            descentralizadas.
-          </p>
+          <h4>{t.utility.title}</h4>
+          <h2>{t.utility.subtitle}</h2>
+          <p>{t.utility.description}</p>
         </div>
         <div className={classes.utilityUse__containerFeatures}>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -28,10 +25,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>
-                Inticoin está descentralizado y respaldado por su comunidad de
-                entusiastas.
-              </p>
+              <p>{t.utility.textBox._01}</p>
             </div>
           </div>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -44,7 +38,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>Pague a sus amigos y familiares.</p>
+              <p>{t.utility.textBox._02}</p>
             </div>
           </div>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -57,9 +51,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>
-                En el mercado de las criptomonedas, la confianza es suprema.
-              </p>
+              <p>{t.utility.textBox._03}</p>
             </div>
           </div>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -72,10 +64,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>
-                La comunidad lo es todo e Inticoin se esfuerza por incluir a
-                todos en todo el mundo.
-              </p>
+              <p>{t.utility.textBox._04}</p>
             </div>
           </div>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -88,9 +77,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>
-                Pasajes aéreos, facturas de servicios públicos y suscripciones.
-              </p>
+              <p>{t.utility.textBox._05}</p>
             </div>
           </div>
           <div className={classes.utilityUse__containerFeatures_object}>
@@ -103,7 +90,7 @@ export const UtilityUse = () => {
               />
             </div>
             <div className={classes.utilityUse__containerFeatures_objectText}>
-              <p>Abarrotes, comida y otros.</p>
+              <p>{t.utility.textBox._06}</p>
             </div>
           </div>
         </div>

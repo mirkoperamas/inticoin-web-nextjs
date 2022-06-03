@@ -72,3 +72,20 @@
     padding: 0 5%;
   }
 }
+
+.translatorBox {
+  display: none;
+  border: 1px solid red;
+  position: absolute;
+  margin-top: 0.5rem;
+  & p {
+    padding: 0 2rem;
+    background: green;
+  }
+}
+
+.langStyle {
+  &:hover .translatorBox {
+    display: block;
+  }
+}

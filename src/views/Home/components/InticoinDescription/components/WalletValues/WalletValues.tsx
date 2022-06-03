@@ -1,8 +1,11 @@
 import React from "react";
 import classes from "./wallet-values.module.scss";
 import Image from "next/image";
+import { useTranslate } from "../../../../../../hooks/useTranslate";
 
 export const WalletValues = () => {
+  const { t } = useTranslate();
+
   return (
     <div
       className={classes.aboutUs__walletValues}
@@ -28,7 +31,7 @@ export const WalletValues = () => {
               />
             </div>
             <h3>
-              <strong>Team</strong>
+              <strong>{t.inticoinDescription.walletValues._01}</strong>
             </h3>
           </div>
           <div
@@ -48,7 +51,7 @@ export const WalletValues = () => {
               />
             </div>
             <h3>
-              <strong>Marketing</strong>
+              <strong>{t.inticoinDescription.walletValues._02}</strong>
             </h3>
           </div>
           <div
@@ -68,7 +71,7 @@ export const WalletValues = () => {
               />
             </div>
             <h3>
-              <strong>Initial liquidity</strong>
+              <strong>{t.inticoinDescription.walletValues._03}</strong>
             </h3>
           </div>
           <div
@@ -88,7 +91,7 @@ export const WalletValues = () => {
               />
             </div>
             <h3>
-              <strong>Ecosystem</strong>
+              <strong>{t.inticoinDescription.walletValues._04}</strong>
             </h3>
           </div>
         </div>

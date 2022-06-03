@@ -55,7 +55,8 @@ const Component = ({
   return (
     <>
       <div className={classes.row}>
-        <div className={classes.row__coin} onClick={() => setOpen(true)}>
+        {/* <div className={classes.row__coin} onClick={() => setOpen(true)}> */}
+        <div className={classes.row__coin}>
           <div className={classes.row__coinImage}>
             <Image
               src={coin.icon}
@@ -94,6 +95,7 @@ const Component = ({
             onKeyUp={
               reserves[1] !== undefined && id === 0 ? hanldleKeyup : () => {}
             }
+            disabled={true}
           />
         </div>
       </div>

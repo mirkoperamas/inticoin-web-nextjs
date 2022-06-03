@@ -47,6 +47,12 @@ export default {
         "Inticoin is a project under development that will utilize the security of UTXO while enabling multiple virtual machines, including EVM and ARM VMs. It is PoS-based and features a Decentralized Governance Protocol (DGP) that allows specific Blockchain configurations to be modified through the use of smart contracts. As a means of fundraising, we implemented a smart contract on the Binance Smart Chain (BSC) to participate in Decentralized Finance (DeFi) platforms.",
       buttonCopy: "Copy contract",
     },
+    walletValues: {
+      _01: "Team",
+      _02: "Marketing",
+      _03: "Initial liquidity",
+      _04: "Ecosystem",
+    },
   },
   collaboration: {
     partners: {

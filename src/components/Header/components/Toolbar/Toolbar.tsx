@@ -58,33 +58,35 @@ export const Toolbar = () => {
               <p>Inti Wiki</p>
             </li>
           </a>
-          <a
+          {/* <a
             onClick={handleLang}
             className={`${classes.active} ${classes.langStyle}`}
           >
             <li>
               <p>{lang}</p>
             </li>
-          </a>
 
-          <Link href={router.asPath} locale="es">
-            <li>
-              <p>Español</p>
-            </li>
-          </Link>
-          <Link href={router.asPath} locale="en">
-            <li>
-              <p>English</p>
-            </li>
-          </Link>
+            <div className={classes.translatorBox}>
+              <Link href={router.asPath} locale="es">
+                <div>
+                  <p>Español</p>
+                </div>
+              </Link>
+              <Link href={router.asPath} locale="en">
+                <div>
+                  <p>English</p>
+                </div>
+              </Link>
+            </div>
+          </a> */}
 
-          {/* <div className={classes.langs}>
+          <div className={classes.langs}>
             {router?.locales?.map((loc: any) => (
               <Link href={router.asPath} locale={loc} key={loc}>
                 {loc}
               </Link>
             ))}
-          </div> */}
+          </div>
         </ul>
       </div>
 

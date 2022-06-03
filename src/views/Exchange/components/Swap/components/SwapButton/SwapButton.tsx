@@ -7,9 +7,9 @@ import { getBalance } from "../../../../../../utils/balance";
 import { changeNetwork } from "../../../../../../utils/wallet";
 import { PreloaderContext } from "../../../../../../contexts/Preloader/PreloaderContext";
 import { useToast } from "../../../../../../hooks/useToast";
-import { IID } from "../../Row/interfaces";
 import { CHAIN_ID, CONTRACTS, NETWORK_MAINNET } from "../../../../../../config";
 import { Web3Context } from "../../../../../../contexts/Web3/Web3Context";
+import { IID } from "../../../Row/interfaces";
 
 type ISwapButton = {
   coinValue: IID;
@@ -96,7 +96,7 @@ export const SwapButton = ({
       )}
 
       {web3.account && values.token0 === "" && web3.chainId === CHAIN_ID && (
-        <button className={`${classes.designButton} ${classes.disabled}`}>
+        <button className={`${classes.swapButton__design} ${classes.disabled}`}>
           <p>Ingresar Valores</p>
         </button>
       )}
@@ -105,7 +105,9 @@ export const SwapButton = ({
         values.token0 !== "" &&
         balance < parseInt(values.token0) &&
         web3.chainId === CHAIN_ID && (
-          <button className={`${classes.designButton} ${classes.disabled}`}>
+          <button
+            className={`${classes.swapButton__design} ${classes.disabled}`}
+          >
             <p>Insuficiente</p>
           </button>
         )}
@@ -116,7 +118,7 @@ export const SwapButton = ({
         approvate === 0 &&
         web3.chainId === CHAIN_ID && (
           <button
-            className={classes.designButton}
+            className={classes.swapButton__design}
             onClick={() =>
               handleApprove(
                 web3.wallet,
@@ -135,7 +137,7 @@ export const SwapButton = ({
         balance >= parseInt(values.token0) &&
         approvate > 0 &&
         web3.chainId === CHAIN_ID && (
-          <button className={classes.designButton} onClick={handleSwap}>
+          <button className={classes.swapButton__design} onClick={handleSwap}>
             <p>Swap</p>
           </button>
         )}

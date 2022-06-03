@@ -68,4 +68,18 @@ export default {
       paragraphSecond: "Token preferido:",
     },
   },
+  abaoutUs: {
+    title: "Plan de Desarrollo",
+    paragraph:
+      "Inticoin es un proyecto en desarrollo que utilizara la seguridad de UTXO al tiempo que habilita múltiples maquinas virtuales, incluidas EVM y ARM VM. esta basado en PoS y cuenta con un Protocolo de Gobernanza Descentralizada (DGP) que permite modificar configuraciones especificas de blockchain mediante el uso de contratos inteligentes. Como medio de recaudacion de fondos, implementamos un contrato inteligente en Glimmer (GLMR) para ser participes en plataformas de Finanzas descentralizadas (DeFi). Gracias a nuestra comunidad, estamos construyendo un sistema financiero descentralizado más inclusivo donde más personas, pymes, comercios e instituciones tienen acceso a mejores servicios financieros más seguros. Nuestra persistencia en el avance del desarrollo del proyecto y gracias a la Fundación Qolkrex, proveedores y empresas que confían en Inticoin conseguimos un capital suficiente para dar inicio a nuestros objetivos. Podrán conseguir nuestra Token INTI en una DEX en la cadena de bloques de Moonbeam. El listado lo informaremos a través de nuestras redes sociales o grupos de comunidad, Telegram y Discord.",
+  },
+  intiNft: {
+    subtitle: "Sobre la colección de Intis...",
+    paragraphOne: "Puedes unirte a nuestros grupos de ",
+    paragraphLetter: "y",
+    paragraphTwo: "para no perderte ninguna novedad.",
+  },
+  mintNft: {
+    title: "Pronto estara disponible nuestra coleccion de Intis ...",
+  },
 };

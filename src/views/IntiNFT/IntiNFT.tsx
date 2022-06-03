@@ -4,10 +4,11 @@ import Image from "next/image";
 import { Informative } from "../../components/modals/Informative/Informative";
 import { MintNFTMobile } from "./components/MintNftMobile/MintNFTMobile";
 import { MintNFT } from "./components/MintNFT/MintNFT";
+import { useTranslate } from "../../hooks/useTranslate";
 
 export const IntiNFT = () => {
   const [paper, setPaper] = useState(false);
-
+  const { t } = useTranslate();
   return (
     <>
       <div className={classes.intiNft__blackCap}></div>
@@ -15,20 +16,18 @@ export const IntiNFT = () => {
         <div className={classes.intiNftContent}>
           <div className={classes.intiNftContent__inicio}>
             <h2>Intis Nft's</h2>
-            <h4 onClick={() => setPaper(true)}>
-              Sobre la coleccion de Intis...
-            </h4>
+            <h4 onClick={() => setPaper(true)}>{t.intiNft.subtitle}</h4>
 
             <p>
-              Puedes unirte a nuestros grupos de{" "}
+              {t.intiNft.paragraphOne}{" "}
               <a href="https://t.me/inticoin" target="_blank">
                 Telegram
               </a>{" "}
-              y{" "}
+              {t.intiNft.paragraphLetter}{" "}
               <a href="https://discord.gg/usCCHykVSS" target="_blank">
                 Discord
               </a>{" "}
-              para no perderte ninguna novedad.
+              {t.intiNft.paragraphTwo}
             </p>
             <section className={classes.intiNftContent__inicioMint}>
               <MintNFT />
